@@ -56,10 +56,10 @@ They are not the same, but they are related. ECS is often combined with data ori
 Confusingly, Entity Component is closer to OOP than to ECS. EC is the native architecture found in many game engines, and is essentially OOP with a larger emphasis on composition. Components in EC do contain behavior, where in ECS systems and components are strictly separated.
 
 ### Is ECS a subset or superset of OOP?
-No. It is strictly possible to implement the rules of ECS in OOP, but this would not be very efficient, nor would it conform to the rules of OOP (like encapsulation).
+No. It is strictly possible to implement the rules of ECS in OOP, but this would not be very efficient, nor would it be canonical OOP (like encapsulation).
 
 ### Is ECS a subset or superset of EC?
-No, for the same reasons as OOP.
+No, for the same reasons as it isn't a subset or superset of OOP.
 
 ### Where should I start when I want to write an ECS application?
 You have to decide whether you want to write your own ECS framework, or select an existing framework. Building your own ECS can be very educational but you should count on working for it for some time, as ECS frameworks internally can be quite complex. 
