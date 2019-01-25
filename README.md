@@ -1,12 +1,49 @@
 # Entity Component Systems FAQ
 Frequently asked questions about Entity Component Systems (ECS). Disclaimer: I am the author of the open source [reflecs](https://github.com/SanderMertens/reflecs) framework. Some of the answers below refer to documentation or features of reflecs, in which case this will be clearly indicated.
 
+General questions:
+- [What is an entity component System?](#what-is-an-entity-component-system)
+- [Where is ECS used?](#where-is-ecs-used)
+- [Why should I use ECS?](#why-should-i-use-ecs)
+- [What are examples of ECS implementations?](#what-are-examples-of-ecs-implementations)
+- [Where can I find ECS example code?](#where-can-i-find-ecs-example-code)
+- [Where should I start when I want to write an ECS application?](#where-should-i-start-when-i-want-to-write-an-ecs-application)
+- [Where can I find resources to learn more about ECS?](#where-can-i-find-resources-to-learn-more-about-ecs)
+- [What is the difference between ECS and OOP?](#what-is-the-difference-between-ecs-and-oop)
+- [Can I mix ECS and OOP in the same application?](#can-i-mix-ecs-and-oop-in-the-same-application)
+- [Is ECS considered to be faster than OOP?](#is-ecs-considered-to-be-faster-than-oop)
+- [Are ECS and Data Oriented Programming the same?](#are-ecs-and-data-oriented-programming-the-same)
+- [What is the difference between EC and ECS?](#what-is-the-difference-between-ec-and-ecs)
+- [Is ECS a subset or superset of OOP?](#is-ecs-a-subset-or-superset-of-oop)
+- [Is ECS a subset or superset of EC?](#is-ecs-a-subset-or-superset-of-ec)
+
+Technical questions:
+- [What is an entity?](#what-is-an-entity)
+- [What is a component?](#what-is-a-component)
+- [What is a system?](#what-is-a-system)
+- [How are entities stored in memory?](#how-are-entities-stored-in-memory)
+- [How are entities matched to systems?](#how-are-entities-matched-to-systems)
+- [Can I add / remove components to entities at any moment in time?](#can-i-add--remove-components-to-entities-at-any-moment-in-time)
+- [Can I create / delete entities at any moment in time?](#can-i-create--delete-entities-at-any-moment-in-time)
+- [Can ECS be used in multithreaded applications?](#can-ecs-be-used-in-multithreaded-applications)
+- [Can you define entity types?](#can-you-define-entity-types)
+- [Can I reuse the same component for multiple purposes?](#can-i-reuse-the-same-component-for-multiple-purposes)
+- [How do I run a system?](#how-do-i-run-a-system)
+- [Can I run systems periodically?](#can-i-run-systems-periodically)
+- [Can I run systems when component values change?](#can-i-run-systems-when-component-values-change)
+- [Can I run systems when I'm adding / removing components?](#can-i-run-systems-when-im-adding--removing-components)
+- [How do I specify the ordering of my systems?](#how-do-i-specify-the-ordering-of-my-systems)
+- [Do I have to read/write component data inside systems?](#do-i-have-to-readwrite-component-data-inside-systems)
+- [How do I specify parent-child relationships in ECS?](#how-do-i-specify-parent-child-relationships-in-ecs)
+- [How many entities, components and systems does a typical application have?](#how-many-entities-components-and-systems-does-a-typical-application-have)
+- [How do I initialize component data?](#how-do-i-initialize-component-data)
+
 ## General questions
 
 ### What is an Entity Component System?
 ECS is an architecture paradigm for writing and organizing code. The key principles that define ECS are a strict separation between data and logic (and therefore a lack of encapsulation) and the prominent role of composition in modeling data.
 
-### Where is ECS being used?
+### Where is ECS used?
 ECS is mostly used in gaming and simulation.
 
 ### Why should I use ECS?
