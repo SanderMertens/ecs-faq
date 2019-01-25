@@ -94,21 +94,33 @@ Care must be taken to not lend to much importance to entity types. A properly de
 Reflecs supports tags and archetypes (they are called "families"). Additionally, reflecs supports "prefabs", which in addition to specifying a named list of components, also store component values. This mechanism is similar to how prefabs work in Unity EC.
 
 ### Can I reuse the same component for multiple purposes?
+No. Entity Component Systems have a nominal type system, which is a fancy way of saying that types (components) are identified by name, and you should not reuse the same structure for different purposes. The reason for this is that a system subscribes for a component, and needs to be able to process the component data without context. Therefore, the meaning of a component must be consistent across all entities.
 
-### How do I run my systems?
+### How do I run a system?
+This depends on the ECS framework. Some ECS frameworks require you to run your systems manually, whereas others run the systems for you. In Reflecs, you declare the systems, after which they will be automatically invoked in the main loop.
 
 ### Can I run systems periodically?
+This depends on the ECS framework. In Reflecs, you can specify a time interval at which a system needs to be ran.
 
 ### Can I run systems when component values change?
+This depends on the ECS framework. In Reflecs, you can specify that a system should be invoked when a component value is set.
 
 ### Can I run systems when I'm adding / removing components?
+This depends on the ECS framework. In Reflecs, you can specify that a system should be invoked when a component is added or removed.
 
 ### How do I specify the ordering of my systems?
+This depends on the ECS framework, but is an important part of ECS design. In an ideal world, systems have no dependencies and can be ran in any order. In practice however, this is seldomly the case. Each ECS framework approaches this problem differently. In Unity ECS for example, you can specify the dependencies of a system (systems that should run before the system).
+
+Reflecs promotes a design in which systems are decoupled as much as possible. It is not possible to specify per-system dependencies, as this would mean that a system requires knowledge about other systems. Instead, reflecs has two strategies for defining system order. First of all, systems can specify a stage in which they should be ran. There are five stages (OnLoad, PreFrame, OnFrame, PostFrame, OnStore), each with a specific purpose. Within a stage, systems are executed in order of declaration.
 
 ### Do I have to read/write component data inside systems?
+No, though it is recommended to do so. When you access a component outside of a system, an ECS framework needs to do a lookup to first see if the entity has the component, and where it is stored. When components are accessed inside a system, the ECS framework knows the interest of the system beforehand, and since data is stored in an array, can precompute the locations of the components for you, which improves performance. 
 
 ### How do I specify parent-child relationships in ECS?
+This depends on the ECS framework. In Reflecs ECS, you can add "Container" entities to entities.
 
 ### How many entities, components and systems does a typical application have?
+This highly depends on the application. Anywhere between a dozen, hundreds, or maybe even thousands of components and systems. The number of entities is tightly coupled with how many objects your game or simulation has.
 
 ### How do I initialize component data?
+This depends on the ECS framework and programming language. An OOP language may let you initialize components in constructors. In Reflecs, you can initialize components with systems that are invoked when a component is added to an entity, or with prefabs.
