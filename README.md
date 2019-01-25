@@ -52,26 +52,46 @@ No, for the same reasons as OOP.
 You have to decide whether you want to write your own ECS framework, or select an existing framework. Building your own ECS can be very educational but you should count on working for it for some time, as ECS frameworks internally can be quite complex. Make sure to read as much as you can about ECS, and try writing a simple project first. Trivial ECS examples are easy to follow and reason about, though actually writing an application in it requires a bit of a shift in mindset (if you are used to OOP).
 
 ### Where can I find resources to learn more about ECS?
+Unity has a few excellent introduction videos on ECS: https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs. If you found a good resource, let me know in an issue and I will add it here.
 
 ## Technical questions
 
 ### What is an entity?
+An entity is a unique identifier (often a 32bit or 64bit integer) that identifies a list of components.
 
 ### What is a component?
+A component can be any data type. Components can be added and removed to entities.
 
-### What is a system>?
-
-### How are entities matched to systems?
+### What is a system?
+A system is a function (code) that subscribes for a combination of components. If an entity has all the components that a system subscribes for, it will be matched with that system, and the system logic will be evaluated for that entity.
 
 ### How are entities stored in memory?
+This depends on the ECS framework. Typically entities are stored in internal tables (arrays) that are organized by a combination of components. For example, all entities with components (A, B) will be stored in the table (A, B), all entities with components (A, C) will be stored in table (A, C) and so on.
+
+### How are entities matched to systems?
+Systems are matched against tables instead of individual entities (if this is how the ECS stores the entities). The set of tables typically stabilizes fast in an application, and thus matching happens very infrequently, even if entities are created / deleted often. If components are added or removed from entities, they will move to a different table.
 
 ### Can I add / remove components to entities at any moment in time?
+This depends on the ECS framework. As systems are iterating over an array, making modifications to that array can have undesired side effects. It is important to understand how an ECS framework handles this.
+
+[Reflecs ECS](https://github.com/SanderMertens/reflecs) allows you to add/remove components at any time.
 
 ### Can I create / delete entities at any moment in time?
+This depends on the ECS framework. As systems are iterating over an array, adding or deleting rows from that array can have undesired side effects. It is important to understand how an ECS framework handles this.
+
+[Reflecs ECS](https://github.com/SanderMertens/reflecs) allows you to create/delete entities at any time.
 
 ### Can ECS be used in multithreaded applications?
+This depends on the framework. Some ECS frameworks explicitly support multithreading (Unity, Specs, Reflecs) while others are not thread safe and leave this up to the application.
+
+ECS frameworks that are multithreaded often take advantage of the fact that, since all data is stored in arrays, work can be easily distributed to worker threads.
 
 ### Can you define entity types?
+This depends on the framework, though usually ECS frameworks have the notion of "archetype" entites, or "tags". An archetype is a named group of components that a certain kind of entity always has. A tag is an empty component that is just there to be able to quickly identify entities.
+
+Care must be taken to not lend to much importance to entity types. A properly designed ECS application does not emphasize what an object _is_, but what an object _has_. If you find yourself in a situation where adding one component should prevent adding another component, you are probably trying to impose OOP on ECS (after all, an object can't be two things at once!).
+
+Reflecs supports tags and archetypes (they are called "families"). Additionally, reflecs supports "prefabs", which in addition to specifying a named list of components, also store component values. This mechanism is similar to how prefabs work in Unity EC.
 
 ### Can I reuse the same component for multiple purposes?
 
