@@ -39,7 +39,7 @@ Contrary to ECS, objects in OOP are often located in different parts of the heap
 ### Are ECS and Data Oriented Programming the same?
 They are not the same, but they are related. ECS is often combined with data oriented programming to produce performant code.
 
-### What is the different EC and ECS?
+### What is the difference between EC and ECS?
 Confusingly, Entity Component is closer to OOP than to ECS. EC is the native architecture found in many game engines, and is essentially OOP with a larger emphasis on composition. Components in EC do contain behavior, where in ECS systems and components are strictly separated.
 
 ### Is ECS a subset or superset of OOP?
