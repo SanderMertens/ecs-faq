@@ -22,7 +22,7 @@ Here is a list of both open source and closed source ECS frameworks:
 ECS is mostly used in gaming and simulation.
 
 ### Why should I use ECS?
-ECS is often considered to promote code reusability and good performance.
+ECS is often considered to promote code reusability and good performance. If you are building a game with large numbers of objects, ECS is worth looking into.
 
 ### Where can I find ECS example code?
 These projects are ECS examples written in Reflecs ECS:
