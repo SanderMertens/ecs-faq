@@ -22,7 +22,16 @@ Here is a list of both open source and closed source ECS frameworks:
 ECS is mostly used in gaming and simulation.
 
 ### Why should I use ECS?
-ECS is often considered to promote code reusability and good performance. 
+ECS is often considered to promote code reusability and good performance.
+
+### Where can I find ECS example code?
+These projects are ECS examples written in Reflecs ECS:
+- https://github.com/SanderMertens/ecs_nbody
+- https://github.com/SanderMertens/ecs_collisions
+- [Reflecs examples](https://github.com/SanderMertens/reflecs/tree/master/examples)
+
+This is an example of a Pong game written in EnTT:
+- https://github.com/DomRe/EnttPong
 
 ### What is the difference between ECS and OOP?
 In OOP, business logic is built around objects and what objects _are_. The identity and class of an object are central to how the business logic is organized. Code is literally "oriented" around objects. Inheritance and polymorphism are mechanisms that at the core capture what an object is and what an object does. Encapsulation further emphasizes this, as the logic that mutates data is colocated on the object that stores the state.
