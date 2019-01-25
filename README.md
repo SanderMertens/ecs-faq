@@ -1,7 +1,7 @@
 # Entity Component Systems FAQ
 Frequently asked questions about Entity Component Systems (ECS). Disclaimer: I am the author of the open source [reflecs](https://github.com/SanderMertens/reflecs) framework. Some of the answers below refer to documentation or features of reflecs, in which case this will be clearly indicated.
 
-General questions:
+**General questions:**
 - [What is an entity component System?](#what-is-an-entity-component-system)
 - [Where is ECS used?](#where-is-ecs-used)
 - [Why should I use ECS?](#why-should-i-use-ecs)
@@ -17,7 +17,7 @@ General questions:
 - [Is ECS a subset or superset of OOP?](#is-ecs-a-subset-or-superset-of-oop)
 - [Is ECS a subset or superset of EC?](#is-ecs-a-subset-or-superset-of-ec)
 
-Technical questions:
+**Technical questions:**
 - [What is an entity?](#what-is-an-entity)
 - [What is a component?](#what-is-a-component)
 - [What is a system?](#what-is-a-system)
