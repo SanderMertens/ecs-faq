@@ -4,7 +4,7 @@ Frequently asked questions about Entity Component Systems (ECS). Disclaimer: I a
 ## General questions
 
 ### What is an Entity Component System?
-ECS is an architecture paradigm for writing and organizing code. The key principles that define an ECS are a strict separation between data and logic (and therefore a lack of encapsulation) and the prominent role of composition in modeling data.
+ECS is an architecture paradigm for writing and organizing code. The key principles that define ECS are a strict separation between data and logic (and therefore a lack of encapsulation) and the prominent role of composition in modeling data.
 
 ### What are examples of ECS implementations?
 Here is a list of both open source and closed source ECS frameworks:
