@@ -51,7 +51,7 @@ No, for the same reasons as OOP.
 ### Where should I start when I want to write an ECS application?
 You have to decide whether you want to write your own ECS framework, or select an existing framework. Building your own ECS can be very educational but you should count on working for it for some time, as ECS frameworks internally can be quite complex. 
 
-Make sure to read as much as you can about ECS, and try writing a simple project first. Trivial ECS examples are easy to follow and reason about, though actually writing an application in it requires a bit of a shift in mindset (if you are used to OOP).
+Make sure to read as much as you can about ECS, and try writing a simple project first. Trivial ECS examples are easy to follow though actually writing an application in it requires a bit of a shift in mindset (if you are used to OOP).
 
 ### Where can I find resources to learn more about ECS?
 Unity has a few excellent introduction videos on ECS: https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs. If you found a good resource, let me know in an issue and I will add it here.
