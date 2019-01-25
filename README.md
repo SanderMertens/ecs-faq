@@ -1,6 +1,8 @@
 # Entity Component Systems FAQ
 Frequently asked questions about Entity Component Systems (ECS). Disclaimer: I am the author of the open source [reflecs](https://github.com/SanderMertens/reflecs) framework. Some of the answers below refer to documentation or features of reflecs, in which case this will be clearly indicated.
 
+If you would like to submit additional questions, or otherwise make changes to the FAQ, feel free to submit an issue or PR.
+
 **General questions:**
 - [What is an entity component System?](#what-is-an-entity-component-system)
 - [Where is ECS used?](#where-is-ecs-used)
