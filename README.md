@@ -1,5 +1,5 @@
 # Entity Component Systems FAQ
-Frequently asked questions about Entity Component Systems (ECS). Disclaimer: I am the author of the open source [reflecs framework](https://github.com/SanderMertens/reflecs). Some of the answers below refer to documentation or features of reflecs, in which case this will be clearly indicated.
+Frequently asked questions about Entity Component Systems (ECS). Disclaimer: I am the author of the open source [reflecs](https://github.com/SanderMertens/reflecs) framework. Some of the answers below refer to documentation or features of reflecs, in which case this will be clearly indicated.
 
 ## General questions
 
@@ -10,39 +10,45 @@ ECS is an architecture paradigm for writing and organizing code. The key princip
 ECS is mostly used in gaming and simulation.
 
 ### Why should I use ECS?
-ECS is often considered to promote code reusability and good performance. If you are building a game with large numbers of objects, ECS is worth looking into.
+ECS is considered to promote code reusability and good performance. If you are building a game with large numbers of objects, ECS is worth looking into.
 
 ### What are examples of ECS implementations?
-Here is a list of both open source and closed source ECS frameworks:
+Here is a non-exhaustive list of both open source and closed source ECS frameworks:
 
 - [Unity ECS](https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs) (C#)
 - [Entitas](https://github.com/sschmid/Entitas-CSharp) (C#, support for others)
-- [AFRAME](https://aframe.io/) (HTML5 / JS)
+- [AFRAME](https://aframe.io) (HTML5 / JS)
 - [Specs](https://slide-rs.github.io/specs/) (Rust)
 - [Artemis](https://github.com/junkdog/artemis-odb) (Java, support for others)
 - [EnTT](https://github.com/skypjack/entt) (C++)
 - [EntityX](https://github.com/alecthomas/entityx) (C++)
+- [anax](https://github.com/miguelmartin75/anax) (C++)
 - [Reflecs](https://github.com/SanderMertens/reflecs) (C)
 
 ### Where can I find ECS example code?
-These projects are ECS examples written in Reflecs ECS:
-- https://github.com/SanderMertens/ecs_nbody
-- https://github.com/SanderMertens/ecs_collisions
-- [Reflecs examples](https://github.com/SanderMertens/reflecs/tree/master/examples)
-
 This is a page with Entitas examples:
 - https://github.com/sschmid/Entitas-CSharp/wiki/Example-projects
 
 This is an example of a Pong game written in EnTT:
 - https://github.com/DomRe/EnttPong
 
-### Where should I start when I want to write an ECS application?
-You have to decide whether you want to write your own ECS framework, or select an existing framework. Building your own ECS can be very educational but you should count on working for it for some time, as ECS frameworks internally can be quite complex. 
+These are projects written in Reflecs:
+- https://github.com/SanderMertens/ecs_nbody
+- https://github.com/SanderMertens/ecs_collisions
+- https://github.com/SanderMertens/reflecs/tree/master/examples
 
-Make sure to read as much as you can about ECS, and try writing a simple project first. Trivial ECS examples are easy to follow though actually writing an application in it requires a bit of a shift in mindset (if you are used to OOP).
+### Where should I start when I want to write an ECS application?
+You have to decide whether you want to write your own ECS framework, or select an existing framework. Building your own ECS can be very educational, but count on spending a fair amount of time on it, as ECS frameworks can be quite complex internally.
+
+Make sure to read as much as you can about ECS, and then try writing a simple project. Trivial ECS examples are easy to follow, but actually writing a whole application in it requires a bit of a shift in mindset.
 
 ### Where can I find resources to learn more about ECS?
-Unity has a few excellent introduction videos on ECS: https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs. If you found a good resource, let me know in an issue and I will add it here.
+- Unity introduction video to ECS: https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs. 
+- Blog explaining performance & maintenance benefits of ECS vs. OOP: https://medium.com/ingeniouslysimple/entities-components-and-systems-89c31464240d
+- Collection of resources on ECS: https://github.com/jslee02/awesome-entity-component-system
+
+
+If you found a good resource, let me know in an issue and I will add it here.
 
 ### What is the difference between ECS and OOP?
 In OOP, business logic is built around objects and what objects _are_. The identity and class of an object are central to how the business logic is organized. Code is literally "oriented" around objects. Inheritance and polymorphism are mechanisms that at the core capture what an object is and what an object does. Encapsulation further emphasizes this, as the logic that mutates data is colocated on the object that stores the state.
