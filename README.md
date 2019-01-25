@@ -30,6 +30,9 @@ These projects are ECS examples written in Reflecs ECS:
 - https://github.com/SanderMertens/ecs_collisions
 - [Reflecs examples](https://github.com/SanderMertens/reflecs/tree/master/examples)
 
+This is a page with Entitas examples:
+- https://github.com/sschmid/Entitas-CSharp/wiki/Example-projects
+
 This is an example of a Pong game written in EnTT:
 - https://github.com/DomRe/EnttPong
 
