@@ -6,6 +6,12 @@ Frequently asked questions about Entity Component Systems (ECS). Disclaimer: I a
 ### What is an Entity Component System?
 ECS is an architecture paradigm for writing and organizing code. The key principles that define ECS are a strict separation between data and logic (and therefore a lack of encapsulation) and the prominent role of composition in modeling data.
 
+### Where is ECS being used?
+ECS is mostly used in gaming and simulation.
+
+### Why should I use ECS?
+ECS is often considered to promote code reusability and good performance. If you are building a game with large numbers of objects, ECS is worth looking into.
+
 ### What are examples of ECS implementations?
 Here is a list of both open source and closed source ECS frameworks:
 
@@ -18,12 +24,6 @@ Here is a list of both open source and closed source ECS frameworks:
 - [EntityX](https://github.com/alecthomas/entityx) (C++)
 - [Reflecs](https://github.com/SanderMertens/reflecs) (C)
 
-### Where is ECS being used?
-ECS is mostly used in gaming and simulation.
-
-### Why should I use ECS?
-ECS is often considered to promote code reusability and good performance. If you are building a game with large numbers of objects, ECS is worth looking into.
-
 ### Where can I find ECS example code?
 These projects are ECS examples written in Reflecs ECS:
 - https://github.com/SanderMertens/ecs_nbody
@@ -35,6 +35,14 @@ This is a page with Entitas examples:
 
 This is an example of a Pong game written in EnTT:
 - https://github.com/DomRe/EnttPong
+
+### Where should I start when I want to write an ECS application?
+You have to decide whether you want to write your own ECS framework, or select an existing framework. Building your own ECS can be very educational but you should count on working for it for some time, as ECS frameworks internally can be quite complex. 
+
+Make sure to read as much as you can about ECS, and try writing a simple project first. Trivial ECS examples are easy to follow though actually writing an application in it requires a bit of a shift in mindset (if you are used to OOP).
+
+### Where can I find resources to learn more about ECS?
+Unity has a few excellent introduction videos on ECS: https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs. If you found a good resource, let me know in an issue and I will add it here.
 
 ### What is the difference between ECS and OOP?
 In OOP, business logic is built around objects and what objects _are_. The identity and class of an object are central to how the business logic is organized. Code is literally "oriented" around objects. Inheritance and polymorphism are mechanisms that at the core capture what an object is and what an object does. Encapsulation further emphasizes this, as the logic that mutates data is colocated on the object that stores the state.
@@ -60,14 +68,6 @@ No. It is strictly possible to implement the rules of ECS in OOP, but this would
 
 ### Is ECS a subset or superset of EC?
 No, for the same reasons as it isn't a subset or superset of OOP.
-
-### Where should I start when I want to write an ECS application?
-You have to decide whether you want to write your own ECS framework, or select an existing framework. Building your own ECS can be very educational but you should count on working for it for some time, as ECS frameworks internally can be quite complex. 
-
-Make sure to read as much as you can about ECS, and try writing a simple project first. Trivial ECS examples are easy to follow though actually writing an application in it requires a bit of a shift in mindset (if you are used to OOP).
-
-### Where can I find resources to learn more about ECS?
-Unity has a few excellent introduction videos on ECS: https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs. If you found a good resource, let me know in an issue and I will add it here.
 
 ## Technical questions
 
