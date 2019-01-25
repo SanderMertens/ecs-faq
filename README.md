@@ -49,7 +49,7 @@ ECS is an architecture paradigm for writing and organizing code. The key princip
 ECS is mostly used in gaming and simulation.
 
 ### Why should I use ECS?
-ECS is considered to promote code reusability and good performance. If you are building a game with large numbers of objects, ECS is worth looking into.
+ECS is considered to promote code reusability and good performance. If you are building a game with large numbers of objects, or want to write code that can be easily reused for other projects, ECS is worth looking into.
 
 ### What are examples of ECS implementations?
 Here is a non-exhaustive list of both open source and closed source ECS frameworks:
@@ -76,23 +76,28 @@ These are projects written in Reflecs:
 - https://github.com/SanderMertens/ecs_collisions
 - https://github.com/SanderMertens/reflecs/tree/master/examples
 
-### Where should I start when I want to write an ECS application?
-You have to decide whether you want to write your own ECS framework, or select an existing framework. Building your own ECS can be very educational, but count on spending a fair amount of time on it, as ECS frameworks can be quite complex internally.
+### Which game engines use ECS?
+There are a few game engines that support ECS natively:
+- [Unity](https://unity3d.com/) (C#, partially ECS)
+- [Amethyst](https://amethyst.rs/) (Rust, pure ECS)
+- [Reflecs](https://github.com/SanderMertens/reflecs) (C, pure ECS)
 
-Make sure to read as much as you can about ECS, and then try writing a simple project. Trivial ECS examples are easy to follow, but actually writing a whole application in it requires a bit of a shift in mindset.
+### Where should I start when I want to write an ECS application?
+You have to decide whether you want to write your own ECS framework, or select an existing framework. Building your own ECS can be very educational, but count on spending a fair amount of time on it, as ECS frameworks can be quite complex internally. Regardless of what you do, try to read as much as you can about ECS. 
+
+Once you have an ECS framework, try writing a simple game. Trivial ECS examples are easy to follow, but writing a whole game in it requires a shift in mindset, and you will likely need to try a few times before you get it right.
 
 ### Where can I find resources to learn more about ECS?
-- Unity introduction video to ECS: https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs. 
-- Blog explaining performance & maintenance benefits of ECS vs. OOP: https://medium.com/ingeniouslysimple/entities-components-and-systems-89c31464240d
-- Collection of resources on ECS: https://github.com/jslee02/awesome-entity-component-system
-
+- [Unity introduction video to ECS](https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs)
+- [Blog explaining performance & maintenance benefits of ECS vs. OOP](https://medium.com/ingeniouslysimple/entities-components-and-systems-89c31464240d)
+- [Collection of resources on ECS](https://github.com/jslee02/awesome-entity-component-system)
 
 If you found a good resource, let me know in an issue and I will add it here.
 
 ### What is the difference between ECS and OOP?
-In OOP, business logic is built around objects and what objects _are_. The identity and class of an object are central to how the business logic is organized. Code is literally "oriented" around objects. Inheritance and polymorphism are mechanisms that at the core capture what an object is and what an object does. Encapsulation further emphasizes this, as the logic that mutates data is colocated on the object that stores the state.
+In OOP, business logic is built around objects and what objects _are_. The identity and class of an object are central to how the business logic is organized. OOP mechanisms like inheritance and polymorphism capture what an object is and what an object does. Encapsulation further emphasizes this, as the logic that mutates data is colocated on the object that stores the state.
 
-ECS on the other hand has no notion of what an object is, but emphasizes what an object (entity) _has_, with composition taking a central role in ECS designs. Furthermore, data and business logic in ECS are strictly separated in components and systems, thus there is no notion of interaction. Business logic in ECS is executed on entities that match certain components, rather than invoking logic upon specific entities explicitly. Because of these differences, ECS is sometimes referred to as the "opposite of OOP".
+ECS on the other hand has no notion of what an object is, but emphasizes what an object (entity) _has_, with composition taking a central role in ECS designs. Whereas OOP combines logic and data on a class, ECS requires a strict separation between the two. Furthermore, whereas in OOP logic is executed directly on an object, in ECS logic is implicitly executed on entities with a matching set of components. Because of these differences, ECS is sometimes referred to as the "opposite of OOP".
 
 ### Can I mix ECS and OOP in the same application?
 Yes.
