@@ -10,11 +10,12 @@ ECS is an architecture paradigm for writing and organizing code. The key princip
 Here is a list of both open source and closed source ECS frameworks:
 
 - [Unity ECS](https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs) (C#)
-- [Entitas](https://github.com/sschmid/Entitas-CSharp) (C#)
+- [Entitas](https://github.com/sschmid/Entitas-CSharp) (C#, support for others)
 - [AFRAME](https://aframe.io/) (HTML5 / JS)
 - [Specs](https://slide-rs.github.io/specs/) (Rust)
-- [Artemis](https://github.com/junkdog/artemis-odb) (Java)
+- [Artemis](https://github.com/junkdog/artemis-odb) (Java, support for others)
 - [EnTT](https://github.com/skypjack/entt) (C++)
+- [EntityX](https://github.com/alecthomas/entityx) (C++)
 - [Reflecs](https://github.com/SanderMertens/reflecs) (C)
 
 ### Where is ECS being used?
