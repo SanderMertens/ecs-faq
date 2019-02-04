@@ -63,7 +63,7 @@ Here is a non-exhaustive list of both open source and closed source ECS framewor
 - [AFRAME](https://aframe.io) (HTML5 / JS)
 - [anax](https://github.com/miguelmartin75/anax) (C++)
 - [Artemis](https://github.com/junkdog/artemis-odb) (Java, support for others)
-- [ecst](https://github.com/SuperV1234/ecst)
+- [ecst](https://github.com/SuperV1234/ecst) (C++)
 - [Entitas](https://github.com/sschmid/Entitas-CSharp) (C#, support for others)
 - [EntityX](https://github.com/alecthomas/entityx) (C++)
 - [EnTT](https://github.com/skypjack/entt) (C++)
