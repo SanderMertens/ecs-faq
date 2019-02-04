@@ -15,6 +15,7 @@ If you would like to submit additional questions, or otherwise make changes to t
 - [Can I mix ECS and OOP in the same application?](#can-i-mix-ecs-and-oop-in-the-same-application)
 - [Is ECS considered to be faster than OOP?](#is-ecs-considered-to-be-faster-than-oop)
 - [Are ECS and Data Oriented Programming the same?](#are-ecs-and-data-oriented-programming-the-same)
+- [Isn't ECS basically just arrays of structs with functions?](#isnt-ecs-basically-just-arrays-of-structs-with-functions)
 - [What is the difference between EC and ECS?](#what-is-the-difference-between-ec-and-ecs)
 - [Is ECS a subset or superset of OOP?](#is-ecs-a-subset-or-superset-of-oop)
 - [Is ECS a subset or superset of EC?](#is-ecs-a-subset-or-superset-of-ec)
