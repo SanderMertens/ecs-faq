@@ -43,7 +43,12 @@ If you would like to submit additional questions, or otherwise make changes to t
 ## General questions
 
 ### What is ECS?
-ECS is an architecture paradigm for writing and organizing code. The key principles that define ECS are a strict separation between data and logic (and therefore a lack of encapsulation) and the prominent role of composition in modeling data.
+ECS is an architecture paradigm for writing and organizing code. The key principles that define ECS are a strict separation between data and logic (and therefore a lack of encapsulation) and the prominent role of composition in modeling data. ECS can be summarized with four simple rules:
+
+- Entities are unique identifiers
+- Components are plain datatypes
+- Entities can contain zero or more components
+- Systems are logic executed on entities with matching component sets
 
 ### Where is ECS used?
 ECS is mostly used in gaming and simulation.
@@ -117,6 +122,15 @@ This does assume that the ECS framework stores data in the most efficient way po
 
 ### Are ECS and Data Oriented Programming the same?
 They are not the same, but they are related. ECS is often combined with data oriented programming to produce performant code.
+
+### Isn't ECS basically just arrays of structs with functions?
+No. ECS is a architecture paradigm, which makes no assumptions about how data is represented. Having said that, ECS frameworks often store entities in arrays, and use functions (or equivalent) to run logic.
+
+To say that these frameworks are "just arrays of structs with functions" though would be a bit reductionist. An ECS framework lets you express at a high level which components systems are interested in. This is then matched by the ECS framework to the entity tables (arrays). This matching logic can be quite sophisticated, as frameworks can support features like excluding components, optional components, and/or matching and so on.
+
+In addition to the matching logic, ECS frameworks often have clever strategies for storing entities in a way that is most efficient for cache efficiency. Frameworks may store each component in a dedicated table, or create tables for every occuring combination of components. Frameworks may be able to match these tables to systems once, instead of matching them in every iteration.
+
+ECS frameworks can do these things while exposing a relatively simple set of high level operations for creating/deleting entities, adding/removing components and creating/running systems. This allows you to write high-performant code, without having to worry about managing all these arrays yourself.
 
 ### What is the difference between EC and ECS?
 Entity Component (EC) is an architecture that has entities and components, like ECS, but contrary to ECS, components can have logic. EC is essentially OOP, in that it uses features like encapsulation, inheritance and polymorphism, but it puts a bigger emphasis on composition. It is a popular architecture in game engines, as it is familiar to developers that know OOP, and makes it easy to add and remove behavior to an object.
