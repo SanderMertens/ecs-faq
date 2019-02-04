@@ -99,6 +99,7 @@ Once you have an ECS framework, try writing a simple game. Trivial ECS examples 
 - [Unity introduction video to ECS](https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs)
 - [Blog explaining performance & maintenance benefits of ECS vs. OOP](https://medium.com/ingeniouslysimple/entities-components-and-systems-89c31464240d)
 - [Collection of resources on ECS](https://github.com/jslee02/awesome-entity-component-system)
+- [Blog explaining how to build a simple ECS](https://blog.therocode.net/2018/08/simplest-entity-component-system)
 
 If you found a good resource, let me know in an issue and I will add it here.
 
