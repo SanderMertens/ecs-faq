@@ -137,6 +137,9 @@ In addition to the matching logic, ECS frameworks often have clever strategies f
 
 ECS frameworks can do these things while exposing a relatively simple set of high level operations for creating/deleting entities, adding/removing components and creating/running systems. This allows you to write high-performant code, without having to worry about managing all these arrays yourself.
 
+### Do ECS frameworks use AoS (arrays of structs) or SoA (structs of arrays)
+It depends on the framework. The ECS architecture does lend itself well to taking advantage of SoA, as systems often only access a subset of the components for an entity. This means an implementation using SoA will generally need to load less data into the CPU cache, which improves performance. Additionally, SoA can be more friendly to vectorize, which allows some compilers to insert SIMD instructions, which further optimize performance.
+
 ### What is the difference between EC and ECS?
 Entity Component (EC) is an architecture that has entities and components, like ECS, but contrary to ECS, components can have logic. EC is essentially OOP, in that it uses features like encapsulation, inheritance and polymorphism, but it puts a bigger emphasis on composition. It is a popular architecture in game engines, as it is familiar to developers that know OOP, and makes it easy to add and remove behavior to an object.
 
