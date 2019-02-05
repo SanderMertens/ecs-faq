@@ -16,6 +16,7 @@ If you would like to submit additional questions, or otherwise make changes to t
 - [Is ECS considered to be faster than OOP?](#is-ecs-considered-to-be-faster-than-oop)
 - [Are ECS and Data Oriented Programming the same?](#are-ecs-and-data-oriented-programming-the-same)
 - [Isn't ECS basically just arrays of structs with functions?](#isnt-ecs-basically-just-arrays-of-structs-with-functions)
+- [Do ECS frameworks use AoS (arrays of structs) or SoA (structs of arrays)?](#do-ecs-frameworks-use-aos-arrays-of-structs-or-soa-structs-of-arrays)
 - [What is the difference between EC and ECS?](#what-is-the-difference-between-ec-and-ecs)
 - [Is ECS a subset or superset of OOP?](#is-ecs-a-subset-or-superset-of-oop)
 - [Is ECS a subset or superset of EC?](#is-ecs-a-subset-or-superset-of-ec)
@@ -137,7 +138,7 @@ In addition to the matching logic, ECS frameworks often have clever strategies f
 
 ECS frameworks can do these things while exposing a relatively simple set of high level operations for creating/deleting entities, adding/removing components and creating/running systems. This allows you to write high-performant code, without having to worry about managing all these arrays yourself.
 
-### Do ECS frameworks use AoS (arrays of structs) or SoA (structs of arrays)
+### Do ECS frameworks use AoS (arrays of structs) or SoA (structs of arrays)?
 It depends on the framework. The ECS architecture does lend itself well to taking advantage of SoA, as systems often only access a subset of the components for an entity. This means an implementation using SoA will generally need to load less data into the CPU cache, which improves performance. Additionally, SoA can be more friendly to vectorize, which allows some compilers to insert SIMD instructions, which further optimize performance.
 
 ### What is the difference between EC and ECS?
