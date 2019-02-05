@@ -70,9 +70,9 @@ Here is a non-exhaustive list of both open source and closed source ECS framewor
 - [Esper](https://github.com/benmoran56/esper) (Python)
 - [Reflecs](https://github.com/SanderMertens/reflecs) (C)
 - [Specs](https://slide-rs.github.io/specs/) (Rust)
-- [Unity ECS](https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs)* (C#)
+- [Unity ECS](https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs)\* (C#)
 
-* Note that Unity GameObjects are _not_ ECS. See the link for more information.
+\* Note that Unity GameObjects are _not_ ECS. See the link for more information.
 
 ### Where can I find ECS example code?
 This is a page with Entitas examples:
