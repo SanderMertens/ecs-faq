@@ -104,6 +104,7 @@ Once you have an ECS framework, try writing a simple game. Trivial ECS examples 
 - [Collection of resources on ECS](https://github.com/jslee02/awesome-entity-component-system)
 - [Blog explaining how to build a simple ECS](https://blog.therocode.net/2018/08/simplest-entity-component-system)
 - [Video from Scott McMillan explaining CPU caching](https://www.youtube.com/watch?v=3-ityWN-FdE&feature=youtu.be)
+- [Video on multithreaded rendering engine (data driven architecture)](https://www.youtube.com/watch?v=0nTDFLMLX9k)
 
 If you found a good resource, let me know in an issue and I will add it here.
 
