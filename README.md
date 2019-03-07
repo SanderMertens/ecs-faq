@@ -13,7 +13,7 @@ If you would like to submit additional questions, or otherwise make changes to t
 - [Where can I find resources to learn more about ECS?](#where-can-i-find-resources-to-learn-more-about-ecs)
 - [What is the difference between ECS and OOP?](#what-is-the-difference-between-ecs-and-oop)
 - [Can I mix ECS and OOP in the same application?](#can-i-mix-ecs-and-oop-in-the-same-application)
-- [Is ECS considered to be faster than OOP?](#is-ecs-considered-to-be-faster-than-oop)
+- [Is ECS faster than OOP?](#is-ecs-faster-than-oop)
 - [Are ECS and Data Oriented Programming the same?](#are-ecs-and-data-oriented-programming-the-same)
 - [Isn't ECS basically just arrays of structs with functions?](#isnt-ecs-basically-just-arrays-of-structs-with-functions)
 - [Do ECS frameworks use AoS (arrays of structs) or SoA (structs of arrays)?](#do-ecs-frameworks-use-aos-arrays-of-structs-or-soa-structs-of-arrays)
@@ -85,8 +85,6 @@ This is an example of a Pong game written in EnTT:
 
 These are projects written in Reflecs:
 - https://github.com/SanderMertens/ecs_nbody
-- https://github.com/SanderMertens/ecs_collisions
-- https://github.com/SanderMertens/reflecs/tree/master/examples
 
 ### Which game engines use ECS?
 There are a few game engines that support ECS natively:
@@ -106,6 +104,7 @@ Once you have an ECS framework, try writing a simple game. Trivial ECS examples 
 - [Blog explaining how to build a simple ECS](https://blog.therocode.net/2018/08/simplest-entity-component-system)
 - [Video from Scott McMillan explaining CPU caching](https://www.youtube.com/watch?v=3-ityWN-FdE&feature=youtu.be)
 - [Video on multithreaded rendering engine in Destiny engine(data driven architecture)](https://www.youtube.com/watch?v=0nTDFLMLX9k)
+- ECS back and forth (from the author of [EnTT](https://github.com/skypjack/entt)) [part 1](https://skypjack.github.io/2019-02-14-ecs-baf-part-1/) and [part 2](https://skypjack.github.io/2019-03-07-ecs-baf-part-2/)
 
 If you found a good resource, let me know in an issue and I will add it here.
 
