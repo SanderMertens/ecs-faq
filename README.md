@@ -17,6 +17,7 @@ If you would like to submit additional questions, or otherwise make changes to t
 - [Are ECS and Data Oriented Programming the same?](#are-ecs-and-data-oriented-programming-the-same)
 - [Isn't ECS basically just arrays of structs with functions?](#isnt-ecs-basically-just-arrays-of-structs-with-functions)
 - [Do ECS frameworks use AoS (arrays of structs) or SoA (structs of arrays)?](#do-ecs-frameworks-use-aos-arrays-of-structs-or-soa-structs-of-arrays)
+- [What is a class-based ECS?](#what-is-a-class-based-ecs)
 - [What is an archetype-based ECS?](#what-is-an-archetype-based-ecs)
 - [What is the difference between EC and ECS?](#what-is-the-difference-between-ec-and-ecs)
 - [Is ECS a subset or superset of OOP?](#is-ecs-a-subset-or-superset-of-oop)
@@ -142,6 +143,13 @@ ECS frameworks can do these things while exposing a relatively simple set of hig
 
 ### Do ECS frameworks use AoS (arrays of structs) or SoA (structs of arrays)?
 ECS frameworks may use either, or something else entirely. The ECS architecture does lend itself well to taking advantage of SoA, as systems often only access a subset of the components for an entity. This means an implementation using SoA will generally need to load less data into the CPU cache, which improves performance. Additionally, SoA can be more friendly to vectorize, which allows some compilers to insert SIMD instructions, which further improve performance.
+
+### What is a class based ECS?
+Class based ECS frameworks use regular OOP classes to model entities, components and systems. A typical approach is an "Entity" class which has a list member with "Component" instances. An application can extend the "Component" class to add custom behavior. Systems can be implemented using yet another class, which contains a list of the components the system is interested in, and a virtual method which is executed when the system is invoked on a list of entities.
+
+This is one of the easiest and straightforward ways to implement an ECS, especially in OOP languages. The downside of this aproach is that it is not particularly performant. It does not allow an application to iterate over entities with a certain set of components without evaluating all the entities, and access to components always require a lookup. The latter especially makes it slower than a regular OOP application, which doesn't require a lookup for accessing class members. Additionally, both objects and components can get scattered across the heap with this approach, resulting in poor cache performance.
+
+Implementation-wise, this approach is more closely related to the "EC" (Entity Component) design than many ECS frameworks. In EC (like Unity GameObjects), each game entity is also a class with a list of components. The only difference between EC and class-based ECS is that the actual logic is stored on the component, whereas in ECS it is not.
 
 ### What is an archetype based ECS?
 Archetype ECS frameworks organize their entities internally based on an "archetype", which is the set of components each entity has. An archetype is a datastructure that only contains the entities and their respective components that match the archetype. When adding a component to an entity results in a previously unseen set of components, a new archetype is created to store the entity.
