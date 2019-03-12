@@ -1,5 +1,5 @@
 # Entity Component Systems FAQ
-Frequently asked questions about Entity Component Systems (ECS). Disclaimer: I am the author of the open source [reflecs](https://github.com/SanderMertens/reflecs) framework. Some of the answers below refer to documentation or features of reflecs, in which case this will be clearly indicated.
+Frequently asked questions about Entity Component Systems (ECS). Disclaimer: I am the author of the open source [flecs](https://github.com/SanderMertens/flecs) framework. Some of the answers below refer to documentation or features of flecs, in which case this will be clearly indicated.
 
 If you would like to submit additional questions, or otherwise make changes to the FAQ, feel free to submit an issue or PR.
 
@@ -71,8 +71,8 @@ Here is a non-exhaustive list of both open source and closed source ECS framewor
 - [EntityX](https://github.com/alecthomas/entityx) (C++)
 - [EnTT](https://github.com/skypjack/entt) (C++)
 - [Esper](https://github.com/benmoran56/esper) (Python)
+- [Flecs](https://github.com/SanderMertens/flecs) (C)
 - [minECS](https://github.com/Alan-FGR/minECS) (C#)
-- [Reflecs](https://github.com/SanderMertens/reflecs) (C)
 - [Specs](https://slide-rs.github.io/specs/) (Rust)
 - [Unity ECS](https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs)\* (C#)
 
@@ -85,14 +85,14 @@ This is a page with Entitas examples:
 This is an example of a Pong game written in EnTT:
 - https://github.com/DomRe/EnttPong
 
-These are projects written in Reflecs:
+These are projects written in flecs:
 - https://github.com/SanderMertens/ecs_nbody
 
 ### Which game engines use ECS?
 There are a few game engines that support ECS natively:
 - [Unity](https://unity3d.com/) (C#, partially ECS)
 - [Amethyst](https://amethyst.rs/) (Rust, pure ECS)
-- [Reflecs](https://github.com/SanderMertens/reflecs) (C, pure ECS)
+- [Flecs](https://github.com/SanderMertens/flecs) (C, pure ECS)
 
 ### Where should I start when I want to write an ECS application?
 You have to decide whether you want to write your own ECS framework, or select an existing framework. Building your own ECS can be very educational, but count on spending a fair amount of time on it, as ECS frameworks can be quite complex internally. Regardless of what you do, try to read as much as you can about ECS. 
@@ -195,7 +195,7 @@ This depends on the ECS framework. As systems are iterating over an array, makin
 This depends on the ECS framework. As systems are iterating over an array, adding or deleting rows from that array can have undesired side effects. It is important to understand how an ECS framework handles this, as this can lead to errors that are hard to debug.
 
 ### Can ECS be used in multithreaded applications?
-This depends on the framework. Some ECS frameworks explicitly support multithreading (Unity, Specs, [Reflecs](https://github.com/SanderMertens/reflecs)) while others are not thread safe and leave this up to the application.
+This depends on the framework. Some ECS frameworks explicitly support multithreading (Unity, Specs, [flecs](https://github.com/SanderMertens/flecs)) while others are not thread safe and leave this up to the application.
 
 ECS frameworks that are multithreaded often take advantage of the fact that, since all data is stored in arrays, work can be easily distributed to worker threads.
 
@@ -235,7 +235,7 @@ No, though it may be faster to do so. When you access a component outside of a s
 Note that different ECS implementations may or may not choose to implement this optimization.
 
 ### How do I specify parent-child relationships in ECS?
-This depends on the ECS framework. In Reflecs ECS, you can add "Container" entities to entities.
+This depends on the ECS framework. In flecs, you can add "Container" entities to entities.
 
 ### How many entities, components and systems does a typical application have?
 This highly depends on the application. Anywhere between a dozen, hundreds, or maybe even thousands of components and systems. The number of entities is tightly coupled with how many "things" your game or simulation has.
