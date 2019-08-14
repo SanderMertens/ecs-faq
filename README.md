@@ -74,6 +74,7 @@ Here is a non-exhaustive list of both open source and closed source ECS framewor
 - [Flecs](https://github.com/SanderMertens/flecs) (C)
 - [minECS](https://github.com/Alan-FGR/minECS) (C#)
 - [Specs](https://slide-rs.github.io/specs/) (Rust)
+- [Legion](https://github.com/TomGillen/legion) (Rust)
 - [Unity ECS](https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs)\* (C#)
 
 \* Note that Unity GameObjects are _not_ ECS. See the link for more information.
