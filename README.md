@@ -93,7 +93,6 @@ This is a projects written in flecs:
 There are a few game engines that support ECS natively:
 - [Unity](https://unity3d.com/) (C#, partially ECS)
 - [Amethyst](https://amethyst.rs/) (Rust, pure ECS)
-- [Flecs](https://github.com/SanderMertens/flecs) (C, pure ECS)
 
 ### Where should I start when I want to write an ECS application?
 You have to decide whether you want to write your own ECS framework, or select an existing framework. Building your own ECS can be very educational, but count on spending a fair amount of time on it, as ECS frameworks can be quite complex internally. Regardless of what you do, try to read as much as you can about ECS. 
