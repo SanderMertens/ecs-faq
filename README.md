@@ -1,5 +1,5 @@
 # Entity Component Systems FAQ
-Frequently asked questions about Entity Component Systems (ECS). Disclaimer: I am the author of the open source [flecs](https://github.com/SanderMertens/flecs) framework. Some of the answers below refer to documentation or features of flecs, in which case this will be clearly indicated.
+Frequently asked questions about Entity Component Systems (ECS). Disclaimer: I am the author of the open source [flecs](https://github.com/SanderMertens/flecs) framework.
 
 If you would like to submit additional questions, or otherwise make changes to the FAQ, feel free to submit an issue or PR.
 
@@ -233,7 +233,7 @@ No, though it may be faster to do so. When you access a component outside of a s
 Note that different ECS implementations may or may not choose to implement this optimization.
 
 ### How do I specify parent-child relationships in ECS?
-This depends on the ECS framework. In flecs, you can add "Container" entities to entities.
+This depends on the ECS framework.
 
 ### How many entities, components and systems does a typical application have?
 This highly depends on the application. Anywhere between a dozen, hundreds, or maybe even thousands of components and systems. The number of entities is tightly coupled with how many "things" your game or simulation has.
