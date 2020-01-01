@@ -71,7 +71,7 @@ Here is a non-exhaustive list of both open source and closed source ECS framewor
 - [EntityX](https://github.com/alecthomas/entityx) (C++)
 - [EnTT](https://github.com/skypjack/entt) (C++)
 - [Esper](https://github.com/benmoran56/esper) (Python)
-- [Flecs](https://github.com/SanderMertens/flecs) (C)
+- [Flecs](https://github.com/SanderMertens/flecs) (C, C++)
 - [minECS](https://github.com/Alan-FGR/minECS) (C#)
 - [Specs](https://slide-rs.github.io/specs/) (Rust)
 - [Legion](https://github.com/TomGillen/legion) (Rust)
