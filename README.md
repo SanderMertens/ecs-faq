@@ -86,7 +86,7 @@ This is a page with Entitas examples:
 This is an example of a Pong game written in EnTT:
 - https://github.com/DomRe/EnttPong
 
-These are projects written in flecs:
+This is a projects written in flecs:
 - https://github.com/SanderMertens/ecs_nbody
 
 ### Which game engines use ECS?
