@@ -111,23 +111,21 @@ Once you have an ECS framework, try writing a simple game. Trivial ECS examples 
 If you found a good resource, let me know in an issue and I will add it here.
 
 ### What is the difference between ECS and OOP?
-In OOP, classes describes how _objects_ behave. The responsibility of defining what an object _is_ and what an object _does_ lies only with its class, and state (members) and behavior (methods) are always tightly coupled by the class. A class therefore is a full description of the behavior of a single object. Encapsulation ensures that a method only mutates members of an object on which it is invoked. 
+ECS enforces a strict separation between data (components) and logic (systems), whereas OOP encourages grouping methods and members. In ECS, data is available for anyone that wants to use it, whereas in OOP access to data is often exclusive to the methods of a class. 
 
-ECS has no notion of classes. Instead, objects (entities) are composed out of a set of simple datatypes (components). A component in ECS is data only and may not contain any behavior. Instead, behavior in ECS is organized in functions (systems) that are dynamically matched against matching entities, based on their set of components. For example, an entity may have a 'Position' and 'Speed' component, which both are plain datatypes representing a coordinate and speed. A 'Move' system could then subscribe for any entity that has 'Position' and 'Speed', and update the position according to the speed.
-
-Because ECS promotes separation of data and behavior, it is sometimes referred to as the "opposite of OOP".
+Strictly speaking one could write OOP code that follows ECS design principles. In practice however ECS code looks very different from the same code expressed in OOP, because ECS and OOP both approach problems in a different way. ECS forces you to think first about the attributes your entities have, then about the logic you want to run on those attributes. In OOP you generally start by defining classes for the different entity kinds, the logic you want to perform on them, and then which attributes they have.
 
 ### Can I mix ECS and OOP in the same application?
 Yes.
 
 ### Is ECS faster than OOP?
-When the same logic is expressed in both ECS and OOP, the ECS variant is likely to be faster. This is particularly noticeable when dealing with large numbers of entities. The reason for the difference in speed is that the ECS architecture allows for more efficient data storage and retrieval by the CPU, which results in far fewer CPU cache misses.
+It depends.
 
-An efficient ECS framework would store components in contiguous arrays. When a CPU requests the value from an address in RAM, it also prefetches a number of bytes that come after the requested value. If subsequent RAM requests use those prefetched values, data retrieval is very fast, since it is already in the CPU cache.
+There are many ways to implement an ECS framework, and many ways in which they can be used. Having said that, the way that ECS defines entities _allows_ for effient storage and retrieval of data from RAM by the CPU. In practice this means that if you are using an ECS framework that is designed to take advantage of this, ECS is faster than OOP when it comes to linearly iterating large amounts of objects that share common attributes like position, velocity or health points.
 
-OOP in contrary, stores objects in individual RAM segments. Because objects often heavily reference each other, CPUs have to jump around in RAM, making it very difficult (if not impossible) to predict which address to fetch next. When an address is not in the CPU cache, but must be fetched from RAM, it is considered to be a "cache miss". Since accessing data from RAM directly can be up to 200x slower than accessing data from the CPU cache, OOP code can run significantly slower than ECS code.
+ECS encourages an application design that takes advantage of this ability (fast linear iterations) by writing functions (systems) that operate on arrays of data, rather than on a single entity as is the case in OOP. This is a shift in thinking and a change in how applications are designed, but is necessary to realize the performance benefits of ECS.
 
-This does assume that the ECS framework stores data in the most efficient way possible.
+ECS is not a silver bullet, there are many cases where dedicated datastructures are a better fit than ECS, or where storing data in ECS has no significant benefits. Understanding your use case and your ECS framework will help you decide whether to store or not store the data in ECS.
 
 ### Are ECS and Data Oriented Programming the same?
 They are not the same, but they are related. ECS is often combined with data oriented programming to produce performant code.
