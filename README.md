@@ -103,7 +103,7 @@ Once you have an ECS framework, try writing a simple game. Trivial ECS examples 
 - [Unity introduction video to ECS](https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs)
 - [Blog explaining performance & maintenance benefits of ECS vs. OOP](https://medium.com/ingeniouslysimple/entities-components-and-systems-89c31464240d)
 - [Collection of resources on ECS](https://github.com/jslee02/awesome-entity-component-system)
-- [Blog explaining how to build a simple ECS](https://blog.therocode.net/2018/08/simplest-entity-component-system)
+- [Blog explaining how to build an ECS](https://austinmorlan.com/posts/entity_component_system)
 - [Video from Scott McMillan explaining CPU caching](https://www.youtube.com/watch?v=3-ityWN-FdE&feature=youtu.be)
 - [Video on multithreaded rendering engine in Destiny engine(data driven architecture)](https://www.youtube.com/watch?v=0nTDFLMLX9k)
 - ECS back and forth (from the author of [EnTT](https://github.com/skypjack/entt)) [part 1](https://skypjack.github.io/2019-02-14-ecs-baf-part-1/) and [part 2](https://skypjack.github.io/2019-03-07-ecs-baf-part-2/)
