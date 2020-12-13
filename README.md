@@ -30,8 +30,8 @@ I'm the author of Flecs, an Entity Component System for C & C++. I'm always expe
 - [How are entities matched with systems?](#how-are-entities-matched-with-systems)
 
 ## How-to
-- [How to create a hierarchy in ECS?](how-to-create-a-hierarchy-in-ecs)
-- [How to store spatial data in ECS?](how-to-store-spatial-data-in-ecs)
+- [How to create a hierarchy in ECS?](#how-to-create-a-hierarchy-in-ecs)
+- [How to store spatial data in ECS?](#how-to-store-spatial-data-in-ecs)
 
 ## Data Oriented Design Questions
 - [What is Data Oriented Design?](#what-is-data-oriented-design)
