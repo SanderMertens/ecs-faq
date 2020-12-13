@@ -343,7 +343,7 @@ RAM is the kind of memory that computers typically have lots of, and is where th
 While RAM is incredibly fast in absolute terms, the bus between a CPU and RAM can become a bottleneck in data-heavy applications. This is why in data oriented design, techniques are employed to minimize the number of loads from RAM.
 
 ### What is a CPU cache?
-A CPU cache is a kind of memory that is much faster, but also _much_ smaller than RAM. When a CPU loads data from RAM it is stored in a cache tier, where lower tiers are faster and larger tiers are larger.
+A CPU cache is a kind of memory that is much faster, but also _much_ smaller than RAM. When a CPU loads data from RAM it is stored in a cache tier, where lower tiers are faster and larger tiers are slower.
 
 Data oriented design employs techniques to utilize a CPU cache as efficiently as possible, so that the number of loads from RAM are minimized.
 
