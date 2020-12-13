@@ -29,6 +29,10 @@ I'm the author of Flecs, an Entity Component System for C & C++. I'm always expe
 - [How are components modified?](#how-are-components-modified)
 - [How are entities matched with systems?](#how-are-entities-matched-with-systems)
 
+## How-to
+- [How to create a hierarchy in ECS?](how-to-create-a-hierarchy-in-ecs)
+- [How to store spatial data in ECS?](how-to-store-spatial-data-in-ecs)
+
 ## Data Oriented Design Questions
 - [What is Data Oriented Design?](#what-is-data-oriented-design)
 - [Is ECS the same as DoD?](#is-ecs-the-same-as-dod)
@@ -286,8 +290,42 @@ There are three popular ways of implementing this.
 
 3. In a reactive ECS a system collects entities that have the right set of components by listening for signals that could cause an entity to match.
 
+## How-to
 
+### How to create a hierarchy in ECS?
+There are several ways to implement a hierarchy in ECS, and it depends on an ECS implementation which ones are available to an application. One approach that works in any implementation is to store the hierarchy in components like so:
 
+```c
+// Store the parent entity on child entities
+struct Parent {
+    entity parent;
+};
+
+// Store all children of a parent in a component with a vector
+struct Children {
+    vector<entity> children;
+};
+
+// Store children in linked list
+struct ChildList {
+    entity first_child; // First child of entity
+    entity prev_sibling; // Previous sibling
+    entity next_sibling; // Next sibling
+};
+```
+
+The disadvantage of this approach is that it relies on component lookups, which can slow down systems that iterate a hierarchy. While flexible, this approach is not ideal for low-level systems, such as applying transforms.
+
+An approach that works especially well if an application just needs to iterate a hierarchy top-down is to sort entities based on their depth in the hierarchy. This has as advantage that it is fast to iterate. A disadvantage is that it requires frequent sorting.
+
+Archetype ECS frameworks may allow splitting up subtrees across different tables. Tables/subtrees can be sorted according to their depth. This has as advantage that iteration is fast, and that sorting is infrequent. The disadvantage of this approach is that it can create a lot of small tables, which can degrade performance.
+
+### How to store spatial data in ECS?
+Spatial data structures like quadtrees and octrees are usually not directly stored in an ECS, as their layout does not match well with the typical ECS layout.
+
+One approach that works well for narrow-phase spatial queries in combination with an ECS is to create a query that iterates relevant entities and stores them in a spatial structure at the beginning (or end) of each frame.
+
+For broad-phase spatial queries an application could leverage runtime tags (if the ECS supports it) where a tag corresponds with a cell in a spatial grid. Combined with queries that match the tag, an application can quickly discard large groups of entities that are not in a certain area.
 
 ## Data Oriented Design
 
