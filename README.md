@@ -201,11 +201,7 @@ As is the case with many things, writing an ECS is easy to learn, but hard to ma
 ### Is ECS fast?
 Generally yes, though this of course depends on what is being measured, and the ECS implementation. Different implementations make different tradeoffs, and as such an operation that is really fast in one framework is quite slow in another. 
 
-Things that ECS implementations are generally good at are querying and iterating sets of entities linearly, or dynamically changing components at runtime.
-
-Things that ECS implementations are generally not good at are queries or operations that require highly specialized data structures, such as binary trees or spatial structures.
-
-Knowing the tradeoffs of an implementation and levering its design ensure you get the most performance out of an ECS.
+Things that ECS implementations are generally good at are querying and iterating sets of entities linearly, or dynamically changing components at runtime. Things that ECS implementations are generally not good at are queries or operations that require highly specialized data structures, such as binary trees or spatial structures. Knowing the tradeoffs of an implementation and levering its design ensure you get the most performance out of an ECS.
 
 ### Is ECS code more reusable?
 Yes. The reason for this is that behavior in an ECS is matched with a set of components, vs. for example being tightly coupled with a class in OOP. This has a couple of implications.
