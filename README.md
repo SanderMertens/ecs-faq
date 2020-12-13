@@ -97,7 +97,7 @@ The current list includes both open and closed source ECS implementations, and e
 ### What is ECS?
 ECS ("Entity Component System") describes a design approach which promotes code reusability by separating data from behavior. Data is often stored in cache-friendly ways which benefits performance. An ECS has the following characteristics:
 
-- It has entities, which unique identifiers
+- It has entities, which are unique identifiers
 - It has components, which are plain datatypes without behavior
 - Entities can contain zero or more components
 - Entities can change components dynamically
