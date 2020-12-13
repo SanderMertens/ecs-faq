@@ -129,7 +129,7 @@ A number of commercial projects and engines today use or have used ECS. If you k
 - Bevy
 - Amethyst
 - Overwatch
-- Minecraft
+- Minecraft Bedrock
 - Bebylon
 
 ### How is ECS different from OOP?
