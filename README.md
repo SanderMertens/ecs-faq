@@ -1,242 +1,406 @@
-# Entity Component Systems FAQ
-Frequently asked questions about Entity Component Systems (ECS). Disclaimer: I am the author of the open source [flecs](https://github.com/SanderMertens/flecs) framework.
+# Entity Component System FAQ
+This FAQ is for anyone interested in ECS & modern, high performance game development. The goal is for answers to be short & correct, but not necessarily complete. The [Resources section](#Resources) contains more in-depth articles.
 
-If you would like to submit additional questions, or otherwise make changes to the FAQ, feel free to submit an issue or PR.
+If you find anything missing or incorrect in the FAQ, feel free to create an issue or PR!
 
-**General questions:**
+## About me
+I'm the author of Flecs, an Entity Component System for C & C++. I'm always experimenting with better ways to implement ECS features, and write about it if I can. If you're interested in discussing ECS, [join the Discord](https://discord.gg/BEzP5Rgrrp)!
+
+## General Questions
 - [What is ECS?](#what-is-ecs)
-- [Where is ECS used?](#where-is-ecs-used)
-- [Why should I use ECS?](#why-should-i-use-ecs)
-- [What are examples of ECS implementations?](#what-are-examples-of-ecs-implementations)
-- [Where can I find ECS example code?](#where-can-i-find-ecs-example-code)
-- [Where should I start when I want to write an ECS application?](#where-should-i-start-when-i-want-to-write-an-ecs-application)
-- [Where can I find resources to learn more about ECS?](#where-can-i-find-resources-to-learn-more-about-ecs)
-- [What is the difference between ECS and OOP?](#what-is-the-difference-between-ecs-and-oop)
-- [Can I mix ECS and OOP in the same application?](#can-i-mix-ecs-and-oop-in-the-same-application)
-- [Is ECS faster than OOP?](#is-ecs-faster-than-oop)
-- [Are ECS and Data Oriented Programming the same?](#are-ecs-and-data-oriented-programming-the-same)
-- [Isn't ECS basically just arrays of structs with functions?](#isnt-ecs-basically-just-arrays-of-structs-with-functions)
-- [Do ECS frameworks use AoS (arrays of structs) or SoA (structs of arrays)?](#do-ecs-frameworks-use-aos-arrays-of-structs-or-soa-structs-of-arrays)
-- [What is a class-based ECS?](#what-is-a-class-based-ecs)
-- [What is an archetype-based ECS?](#what-is-an-archetype-based-ecs)
-- [What is the difference between EC and ECS?](#what-is-the-difference-between-ec-and-ecs)
-- [Is ECS a subset or superset of OOP?](#is-ecs-a-subset-or-superset-of-oop)
-- [Is ECS a subset or superset of EC?](#is-ecs-a-subset-or-superset-of-ec)
+- [When is something an ECS?](#when-is-something-an-ecs)
+- [Why is ECS used?](#why-is-ecs-used)
+- [Who is using ECS?](#who-is-using-ecs)
+- [How is ECS different from OOP?](#how-is-ecs-different-from-oop)
+- [How is ECS different from Entity-Component frameworks?](#how-is-ecs-different-from-entity-component-frameworks)
+- [Is ECS hard to learn?](#is-ecs-hard-to-learn)
+- [Is ECS a lower level of abstraction?](#is-ecs-a-lower-level-of-abstraction)
+- [Does ECS require writing more code?](#does-ecs-require-writing-more-code)
+- [Is ECS good for low-level code?](#is-ecs-good-for-low-level-code)
+- [Can ECS be implemented in any language?](#can-ecs-be-implemented-in-any-language)
+- [Should I write my own ECS?](#should-i-write-my-own-ecs)
+- [Is ECS fast?](#is-ecs-fast)
+- [Is ECS code more reusable?](#is-ecs-code-more-reusable)
+- [Is ECS good for multithreading?](#is-ecs-good-for-multithreading)
+- [Can ECS be used outside of gaming?](#can-ecs-be-used-outside-of-gaming)
+- [How do I start with ECS?](#how-do-i-start-with-ecs)
+- [How do I design for ECS?](#how-do-i-write-for-ecs)
+- [What are the different ways to implement an ECS?](#what-are-the-different-ways-to-implement-an-ecs)
+- [How are components modified?](#how-are-components-modified)
+- [How are entities matched with systems?](#how-are-entities-matched-with-systems)
 
-**Technical questions:**
-- [What is an entity?](#what-is-an-entity)
-- [What is a component?](#what-is-a-component)
-- [What is a system?](#what-is-a-system)
-- [How are entities stored in memory?](#how-are-entities-stored-in-memory)
-- [How are entities matched to systems?](#how-are-entities-matched-to-systems)
-- [Can I add / remove components to entities at any moment in time?](#can-i-add--remove-components-to-entities-at-any-moment-in-time)
-- [Can I create / delete entities at any moment in time?](#can-i-create--delete-entities-at-any-moment-in-time)
-- [Can ECS be used in multithreaded applications?](#can-ecs-be-used-in-multithreaded-applications)
-- [Can you define entity types?](#can-you-define-entity-types)
-- [Can I reuse the same component for multiple purposes?](#can-i-reuse-the-same-component-for-multiple-purposes)
-- [How do I run a system?](#how-do-i-run-a-system)
-- [Can I run systems periodically?](#can-i-run-systems-periodically)
-- [Can I run systems when component values change?](#can-i-run-systems-when-component-values-change)
-- [Can I run systems when I'm adding / removing components?](#can-i-run-systems-when-im-adding--removing-components)
-- [How do I specify the ordering of my systems?](#how-do-i-specify-the-ordering-of-my-systems)
-- [Do I have to read/write component data inside systems?](#do-i-have-to-readwrite-component-data-inside-systems)
-- [How do I specify parent-child relationships in ECS?](#how-do-i-specify-parent-child-relationships-in-ecs)
-- [How many entities, components and systems does a typical application have?](#how-many-entities-components-and-systems-does-a-typical-application-have)
-- [How do I initialize component data?](#how-do-i-initialize-component-data)
+## Data Oriented Design Questions
+- [What is Data Oriented Design?](#what-is-data-oriented-design)
+- [Is ECS the same as DoD?](#is-ecs-the-same-as-dod)
+- [What is Random Access Memory?](#what-is-random-access-memory)
+- [What is a CPU cache?](#what-is-a-cpu-cache)
+- [What is a cache line](#what-is-a-cache-line)
+- [What is locality of reference?](#what-is-locality-of-reference)
+- [What is SIMD?](#what-is-simd)
+- [What is vectorization?](#what-is-vectorization)
+- [What is false sharing?](#what-is-false-sharing)
+- [What is AoS?](#what-is-aos)
+- [What is SoA?](#what-is-soa)
+- [What is branch prediction?](#what-is-branch-prediction)
 
-## General questions
+## Glossary
+- [Entity](#entity)
+- [Component](#component)
+- [Tag](#tag)
+- [System](#system)
+- [Query](#query)
+- [World](#world)
+- [Registry](#registry)
+- [Table](#table)
+- [Archetype](#archetype)
+
+## ECS frameworks
+The current list includes both open and closed source ECS implementations, and engines that have adopted ECS pattern. Projects that had no activity in the past year are not included.
+
+- [AFRAME](https://aframe.io) (HTML5/JS, MIT)
+- [Artemis](https://github.com/junkdog/artemis-odb) (Java, custom license)
+- [Bevy ECS](https://github.com/bevyengine/bevy) (Rust, MIT)
+- [EntityX](https://github.com/alecthomas/entityx) (C++11, MIT)
+- [Entitas](https://github.com/sschmid/Entitas-CSharp) (C#, MIT)
+- [EnTT](https://github.com/skypjack/entt) (C++17, MIT)
+- [Esper](https://github.com/benmoran56/esper) (Python, MIT)
+- [Flecs](https://github.com/SanderMertens/flecs) (C/C++11, MIT)
+- [Hecs](https://github.com/Ralith/hecs) (Rust, MIT)
+- [Legion](https://github.com/amethyst/legion) (Rust, MIT)
+- [Our Machinery](https://ourmachinery.com/) (C, commercial license)
+- [Shipyard](https://github.com/leudz/shipyard) (Rust, Apache/MIT)
+- [Specs](https://github.com/amethyst/specs) (Rust, Apache/MIT)
+- [Svelto](https://github.com/sebas77/Svelto.ECS) (C#, MIT)
+- [tiny-ecs](https://github.com/bakpakin/tiny-ecs) (Lua, MIT)
+- [Unity DOTS](https://unity.com/dots) (C#, commercial license)
+
+## Resources
+- [Overwatch Gameplay Architecture and Netcode](https://www.youtube.com/watch?v=W3aieHjyNvw) (Blizzard, GDC)
+- [Data-Oriented Design and C++](https://www.youtube.com/watch?v=rX0ItVEVjHc) (Mike Acton, CppCon)
+- [CPU caches and why you care](https://vimeo.com/97337258) (Scott Meyers)
+- [Data Oriented Design](https://www.dataorienteddesign.com/dodbook/dodmain.html) (Richard Fabian, book)
+- [Entities, Components and Systems](https://medium.com/ingeniouslysimple/entities-components-and-systems-89c31464240d) (Mark Jordan)
+- [Awesome Entity Component System](https://github.com/jslee02/awesome-entity-component-system) (Jeongseok Lee, collection)
+- [Why Vanilla ECS is not enough](https://ajmmertens.medium.com/why-vanilla-ecs-is-not-enough-d7ed4e3bebe5) (Sander Mertens)
+- [Formalisation of Concepts behind ECS and Entitas](https://medium.com/@icex33/formalisation-of-concepts-behind-ecs-and-entitas-8efe535d9516) (Maxim Zaks)
+- [Entity Component System and Rendering](https://ourmachinery.com/post/ecs-and-rendering/) (Our Machinery)
+- [Specs and Legion, two very different approaches to ECS](https://csherratt.github.io/blog/posts/specs-and-legion/) (Cora Sherrat)
+- [Archetypes and Vectorization](https://medium.com/@ajmmertens/building-an-ecs-2-archetypes-and-vectorization-fe21690805f9) (Sander Mertens)
+- [ECS back & forth](https://skypjack.github.io/2019-02-14-ecs-baf-part-1/) (Michele Caini, series)
+
+## General Questions
 
 ### What is ECS?
-ECS is an architecture paradigm for writing and organizing code. The key principles that define ECS are a strict separation between data and logic (and therefore a lack of encapsulation) and the prominent role of composition in modeling data. ECS can be summarized with four simple rules:
+ECS ("Entity Component System") describes a design approach which promotes code reusability by separating data from behavior. Data is often stored in cache-friendly ways which benefits performance. An ECS has the following characteristics:
 
-- Entities are unique identifiers
-- Components are plain datatypes
+- It has entities, which unique identifiers
+- It has components, which are plain datatypes without behavior
 - Entities can contain zero or more components
-- Systems are logic executed on entities with matching component sets
+- Entities can change components dynamically
+- It has systems, which are functions matched with entities that have a certain set of components.
 
-### Where is ECS used?
-ECS is mostly used in gaming and simulation.
+The ECS design pattern is often enabled by a framework. The term "Entity Component System" is often used to indicate a specific implementation of the design pattern.
 
-### Why should I use ECS?
-ECS is considered to promote code reusability and good performance. If you are building a game with large numbers of objects, or want to write code that can be easily reused for other projects, ECS is worth looking into.
+### When is something an ECS?
+The most rigid interperation of an ECS is something that has entities, components and systems, according to the definitions in the previous question.
 
-### What are examples of ECS implementations?
-Here is a non-exhaustive list of both open source and closed source ECS frameworks:
+In practice ECS is used a bit more liberally. Some ECS frameworks do not have systems, and only provide methods for querying entities. Other frameworks may allow for adding things to entities than are not components. These implementations are still considered ECS by many people.
 
-- [AFRAME](https://aframe.io) (HTML5 / JS)
-- [anax](https://github.com/miguelmartin75/anax) (C++)
-- [Artemis](https://github.com/junkdog/artemis-odb) (Java, support for others)
-- [ecst](https://github.com/SuperV1234/ecst) (C++)
-- [Entitas](https://github.com/sschmid/Entitas-CSharp) (C#, support for others)
-- [EntityX](https://github.com/alecthomas/entityx) (C++)
-- [EnTT](https://github.com/skypjack/entt) (C++)
-- [Esper](https://github.com/benmoran56/esper) (Python)
-- [Flecs](https://github.com/SanderMertens/flecs) (C, C++)
-- [minECS](https://github.com/Alan-FGR/minECS) (C#)
-- [Specs](https://slide-rs.github.io/specs/) (Rust)
-- [Legion](https://github.com/TomGillen/legion) (Rust)
-- [Unity ECS](https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs)\* (C#)
+A framework that lets you add "things" to entities, with a way to query for entities that have some things but not other things, is generally considered to be an ECS.
 
-\* Note that Unity GameObjects are _not_ ECS. See the link for more information.
+### Why is ECS used?
+There are a number of reasons why ECS is gaining popularity amongst game developers:
 
-### Where can I find ECS example code?
-This is a page with Entitas examples:
-- https://github.com/sschmid/Entitas-CSharp/wiki/Example-projects
+- ECS can typically support larger numbers of game objects
+- ECS code tends to be more reusable 
+- ECS code is easier to extend with new features
+- ECS allows for a more dynamic coding style
 
-This is an example of a Pong game written in EnTT:
-- https://github.com/DomRe/EnttPong
+### Who is using ECS?
+A number of commercial projects and engines today use or have used ECS. If you know of other projects that uses ECS, let me know!
 
-This is a projects written in flecs:
-- https://github.com/SanderMertens/ecs_nbody
+- Unity (DOTS)
+- Unreal (Sequencer)
+- Our Machinery
+- Bevy
+- Amethyst
+- Overwatch
+- Minecraft
+- Bebylon
 
-### Which game engines use ECS?
-There are a few game engines that support ECS natively:
-- [Unity](https://unity3d.com/) (C#, partially ECS)
-- [Amethyst](https://amethyst.rs/) (Rust, pure ECS)
+### How is ECS different from OOP?
+ECS is often described as an alternative to Object Oriented Programming. While ECS and OOP overlap, there are differences that impact how applications are designed:
 
-### Where should I start when I want to write an ECS application?
-You have to decide whether you want to write your own ECS framework, or select an existing framework. Building your own ECS can be very educational, but count on spending a fair amount of time on it, as ECS frameworks can be quite complex internally. Regardless of what you do, try to read as much as you can about ECS. 
+- Inheritance is a 1st class citizen in OOP, composition is a 1st class citizen in ECS.
+- OOP encourages encapsulation of data, ECS encourages exposed POD (plain old data) objects.
+- OOP colocates data with behavior, ECS separates data from behavior.
+- OOP Object instances are of a single static type, entities can have multiple, dynamically changing components
 
-Once you have an ECS framework, try writing a simple game. Trivial ECS examples are easy to follow, but writing a whole game in it requires a shift in mindset, and you will likely need to try a few times before you get it right.
+It should be noted that some have argued that ECS fits the characterisics of _Object Oriented Design_ (see https://www.gamedev.net/blogs/entry/2265481-oop-is-dead-long-live-oop/) and should therefore be considered a subset. 
 
-### Where can I find resources to learn more about ECS?
-- [Unity introduction video to ECS](https://unity3d.com/learn/tutorials/topics/scripting/introduction-ecs)
-- [Blog explaining performance & maintenance benefits of ECS vs. OOP](https://medium.com/ingeniouslysimple/entities-components-and-systems-89c31464240d)
-- [Collection of resources on ECS](https://github.com/jslee02/awesome-entity-component-system)
-- [Blog explaining how to build an ECS](https://austinmorlan.com/posts/entity_component_system)
-- [Video from Scott McMillan explaining CPU caching](https://www.youtube.com/watch?v=3-ityWN-FdE&feature=youtu.be)
-- [Video on multithreaded rendering engine in Destiny engine(data driven architecture)](https://www.youtube.com/watch?v=0nTDFLMLX9k)
-- ECS back and forth (from the author of [EnTT](https://github.com/skypjack/entt)) [part 1](https://skypjack.github.io/2019-02-14-ecs-baf-part-1/) and [part 2](https://skypjack.github.io/2019-03-07-ecs-baf-part-2/)
+However, in practice the design process of an ECS application is sufficiently different from that of what most people would recognize as OOP. As such it is at least useful to approach it as a separate approach towards design.
 
-If you found a good resource, let me know in an issue and I will add it here.
+### How is ECS different from Entity-Component frameworks?
+Confusingly, ECS and Entity-Component frameworks (EC) are not the same. EC frameworks, as typically found in game engines, are similar to ECS in that they allow for the creation of entities and the composition of components. However, in an EC framework, components are classes that contain both data and behavior, and behavior is executed directly on the component.
 
-### What is the difference between ECS and OOP?
-ECS enforces a strict separation between data (components) and logic (systems), whereas OOP encourages grouping methods and members. In ECS, data is available for anyone that wants to use it, whereas in OOP access to data is often exclusive to the methods of a class. 
+A simple EC framework would look something like this:
 
-Strictly speaking one could write OOP code that follows ECS design principles. In practice however ECS code looks very different from the same code expressed in OOP, because ECS and OOP both approach problems in a different way. ECS forces you to think first about the attributes your entities have, then about the logic you want to run on those attributes. In OOP you generally start by defining classes for the different entity kinds, the logic you want to perform on them, and then which attributes they have.
+```cpp
+class IComponent {
+public:
+    virtual void update() = 0;
+};
 
-### Can I mix ECS and OOP in the same application?
+class Entity {
+    vector<IComponent*> components;
+public:
+    void addComponent(IComponent *component);
+    void removeComponent(IComponent *component);
+    void updateComponents();
+};
+```
+
+Building features in an EC framework generally means inheriting from an `IComponent` interface, and composing entities from multiple components. An example of EC in practice is Unity's `GameObject` system.
+
+### Is ECS hard to learn?
+The small number of concepts and rules of an ECS are generally easy to learn. Applying them correctly however can take practice. Some aspects of ECS design go against intuition, especially when coming from an OOP background.
+
+Anecdotally, users have reported that once ECS "clicked", it made it easier to write, reuse and scale code.
+
+### Is ECS a lower level of abstraction?
+Not necessarily. While some ECS designs can leverage low-level machine optimizations, the code written for an ECS is not necessarily lower or higher level than other approaches.
+
+### Does ECS require writing more code?
+There is not a single answer to this, and highly depends on the ECS framework and engine that is used. 
+
+When an ECS framework is integrated with an engine, it can result in pretty compact and concise code that can be even shorter than non-ECS alternatives. Examples of engines with integrated ECS are Bevy, Amethyst and Our Machinery.
+
+When ECS is not integrated with an engine, the additional glue-code to bridge between the native engine types and the ECS can cause an application to have to write more code.
+
+Having said that, the time spent on writing ECS code is offset by time savings as the result of a more maintainable code base.
+
+### Is ECS good for low level code?
+Low level engine code such as rendering and physics may want to use advanced features of the underlying hardware such as vectorization, while optimizing cache locality. Some ECS frameworks are better suited for this than others. 
+
+Generally speaking, when an ECS provides access to raw component arrays, it lends itself better towards low-level optimizations. Another deciding factor, especially in modern games, is how easiy it is to multithread such systems.
+
+### Can ECS be implemented in any language?
 Yes.
 
-### Is ECS faster than OOP?
-It depends.
+### Should I write my own ECS?
+Because of its small set of concepts and rules, building a functional ECS is not hard. There are many benefits to building your own, like the freedom to add new features, and only building features that you really need.
 
-There are many ways to implement an ECS framework, and many ways in which they can be used. Having said that, the way that ECS defines entities _allows_ for effient storage and retrieval of data from RAM by the CPU. In practice this means that if you are using an ECS framework that is designed to take advantage of this, ECS is faster than OOP when it comes to linearly iterating large amounts of objects that share common attributes like position, velocity or health points.
+If you write your own implementation however, you should fully expect that it will not outperform established implementations. There are a lot of tricks that have been invented over time to provide a balanced performance across ECS operations. It requires constant education, experimentation and iteration to stay on top of new developments.
 
-ECS encourages an application design that takes advantage of this ability (fast linear iterations) by writing functions (systems) that operate on arrays of data, rather than on a single entity as is the case in OOP. This is a shift in thinking and a change in how applications are designed, but is necessary to realize the performance benefits of ECS.
+As is the case with many things, writing an ECS is easy to learn, but hard to master.
 
-ECS is not a silver bullet, there are many cases where dedicated datastructures are a better fit than ECS, or where storing data in ECS has no significant benefits. Understanding your use case and your ECS framework will help you decide whether to store or not store the data in ECS.
+### Is ECS fast?
+Generally yes, though this of course depends on what is being measured, and the ECS implementation. Different implementations make different tradeoffs, and as such an operation that is really fast in one framework is quite slow in another. 
 
-### Are ECS and Data Oriented Programming the same?
-They are not the same, but they are related. ECS is often combined with data oriented programming to produce performant code.
+Things that ECS implementations are generally good at are querying and iterating sets of entities linearly, or dynamically changing components at runtime.
 
-### Isn't ECS basically just arrays of structs with functions?
-No. ECS is a architecture paradigm, which makes no assumptions about how data is represented. Having said that, ECS frameworks often store entities in arrays, and use functions (or equivalent) to run logic.
+Things that ECS implementations are generally not good at are queries or operations that require highly specialized data structures, such as binary trees or spatial structures.
 
-To say that these frameworks are "just arrays of structs with functions" though would be a bit reductionist. An ECS framework lets you express at a high level which components systems are interested in. This is then matched by the ECS framework to the entity tables (arrays). This matching logic can be quite sophisticated, as frameworks can support features like excluding components, optional components, and/or matching and so on.
+Knowing the tradeoffs of an implementation and levering its design ensure you get the most performance out of an ECS.
 
-In addition to the matching logic, ECS frameworks often have clever strategies for storing entities in a way that is most efficient for cache efficiency. Frameworks may store each component in a dedicated table, or create tables for every occuring combination of components. Frameworks may be able to match these tables to systems once, instead of matching them in every iteration.
+### Is ECS code more reusable?
+Yes. The reason for this is that behavior in an ECS is matched with a set of components, vs. for example being tightly coupled with a class in OOP. This has a couple of implications.
 
-ECS frameworks can do these things while exposing a relatively simple set of high level operations for creating/deleting entities, adding/removing components and creating/running systems. This allows you to write high-performant code, without having to worry about managing all these arrays yourself.
+The first one is obvious. Because behavior is not tied to a single class, it can be reused across entities of different classes. The typical example is that of a "Move" system that is matched with any entity that has a "Position" and "Velocity" component.
 
-### Do ECS frameworks use AoS (arrays of structs) or SoA (structs of arrays)?
-ECS frameworks may use either, or something else entirely. The ECS architecture does lend itself well to taking advantage of SoA, as systems often only access a subset of the components for an entity. This means an implementation using SoA will generally need to load less data into the CPU cache, which improves performance. Additionally, SoA can be more friendly to vectorize, which allows some compilers to insert SIMD instructions, which further improve performance.
+This is not impossible to achieve in other, more OOP-style designs, but this often relies on class-based inheritance. Inheritance has well-known problems, such as how difficult it can be to refactor a class hierarchy, or how low-level base classes tend to accumulate bloat over time.
 
-### What is a class based ECS?
-Class based ECS frameworks use regular OOP classes to model entities, components and systems. A typical approach is an "Entity" class which has a list member with "Component" instances. An application can extend the "Component" class to add custom data members. Systems can be implemented using yet another class, which contains a list of the components the system is interested in, and a virtual method which is executed when the system is invoked on a list of entities.
+However, EC frameworks can provide similar levels of reusability, where components are simply added to game entities. (see [How is ECS different from Entity-Component frameworks?](#how-is-ecs-different-from-entity-component-frameworks)).
 
-This is one of the easiest and straightforward ways to implement an ECS, especially in OOP languages. The downside of this aproach is that it is not particularly performant. It does not allow an application to iterate over entities with a certain set of components without evaluating all the entities, and access to components always require a lookup. The latter especially makes it slower than a regular OOP application, which doesn't require a lookup for accessing class members. Additionally, both objects and components can get scattered across the heap with this approach, resulting in poor cache performance.
+The big advantage of ECS here however, is that new systems can be introduced at any stage of development, and will automatically get matched with any existing and new entities that have the right components. This promotes a design where systems are developed as single-responsibility, small units of functionality that can be easily deployed across different projects.
 
-Implementation-wise, this approach is more closely related to the "EC" (Entity Component) design than many ECS frameworks. In EC (like Unity GameObjects), each game entity is also a class with a list of components. The only difference between EC and class-based ECS is that the actual logic is stored on the component, whereas in ECS it is not.
+### Is ECS good for multithreading?
+Generally yes. The separation of data and behavior makes it easier to identify individual systems, what their dependencies are, and how they should be scheduled. The approach towards multithreading differs between different ECS implementations, but most approaches make it easier to multithread code.
 
-### What is an archetype based ECS?
-Archetype ECS frameworks organize their entities internally based on an "archetype", which is the set of components each entity has. An archetype is a datastructure that only contains the entities and their respective components that match the archetype. When adding a component to an entity results in a previously unseen set of components, a new archetype is created to store the entity.
+### Can ECS be used outside of gaming?
+Yes. It can be (and has been) used for projects outside of gaming.
 
-An advantage of archetype-based ECS frameworks is that it is relatively easy to get a set of matching entities. If a system is interested in entities for components (A, B), it only needs to match the component lists of the archetypes, instead of individual entities. Additionally, archetype-based ECS frameworks tend to store their entities in arrays (either SoA or AoS), which is cache friendly.
+### How do I start with ECS?
+I highly recommend reading existing resources on ECS and experimenting with the approaches they describe. Reading the code of example ECS projects can also be a good way to fast-track your understanding of how ECS applications are written.
 
-A disadvantage of archetype based ECS frameworks is that every time a component is added to an entity, the entity needs to move from its previous archetype to the new archetype, which involves copying its component data. Additionally, finding the right archetype for a given set of components can be expensive, as it often involves hashing the component ids to obtain the archetype id.
+### How do I design for ECS?
+Designing an ECS application starts with creating the components (data structures) that contain the game data. Important things to take into account are:
 
-Another disadvantage of archetype-based frameworks is that complex applications typically have many different archetypes active at the same time, which scatters entities across archetypes. This causes systems to jump around archetypes more often than what would be strictly necessary from a usage perspective.
+- How many instances of the data will exist
+- How often is data accessed
+- How often does data change
+- When does data need to be accessed/mutated
+- Which data is accessed/mutated together
+- What is the cardinality of the data
 
-### What is the difference between EC and ECS?
-Entity Component (EC) is an architecture that has entities and components, like ECS, but contrary to ECS, components can have logic. EC is essentially OOP, in that it uses features like encapsulation, inheritance and polymorphism, but it puts a bigger emphasis on composition. It is a popular architecture in game engines, as it is familiar to developers that know OOP, and makes it easy to add and remove behavior to an object.
+It is good practice to design components and systems to have a single responsibility. This makes them easier to reuse across projects, and makes it easier to refactor code.
 
-EC code is generally slower than the equivalent code in ECS, for the same reasons as mentioned [here](#is_ecs_faster_than_oop).
+### What are the different ways to implement an ECS?
+There are many different ways in which to implement an ECS, each with different tradeoffs. This non exhaustive list contains some of the more popular approaches:
 
-### Is ECS a subset or superset of OOP?
-No. It is strictly possible to implement the rules of ECS in OOP, but this would not be very efficient, nor would it be canonical OOP (like encapsulation).
+#### Archetypes (aka "Dense ECS" or "Table based ECS")
+An archetype ECS stores entities in tables, where components are columns and entities are rows. Archetype implementations are fast to query and iterate.
 
-### Is ECS a subset or superset of EC?
-No, for the same reasons as it isn't a subset or superset of OOP.
+Examples of archetype implementations are Flecs (C/C++), Our Machinery (C), Unity DOTS (C#)Unreal Sequencer (C++), Bevy ECS (Rust), Legion (Rust) and Hecs (Rust).
 
-## Technical questions
+#### Sparse set ECS (aka "Sparse ECS")
+A sparse set based ECS stores each component in its own sparse set which is has the entity id as key. Sparse set implementations allow for fast add/remove operations.
 
-### What is an entity?
-An entity is a unique identifier (often a 32bit or 64bit integer) that identifies a list of components.
+Examples of sparse set implementations are EnTT (C++) and Shipyard (Rust).
 
-### What is a component?
-A component can be any data type. Components can be added and removed to entities.
+#### Bitset based ECS
+A bitset-based ECS stores components in arrays where the entity id is used as index, and uses a bitset to indicate if an entity has a specific component.
 
-### What is a system?
-A system is logic (typically a function) that subscribes for a combination of components. If an entity has all the components that a system subscribes for, it will be matched with that system, and the system logic will be evaluated for that entity.
+Examples of bitset implementations are EntityX (C++) and Specs (Rust).
 
-### How are entities stored in memory?
-This depends on the ECS framework. Typically entities are stored in internal tables (arrays) that are organized by a combination of components. For example, all entities with components (A, B) will be stored in the table (A, B), all entities with components (A, C) will be stored in table (A, C) and so on.
+#### Reactive ECS
+A reactive ECS uses signals resulting from entity mutations to keep track of which entities match systems/queries.
 
-### How are entities matched to systems?
-Systems are matched against tables instead of individual entities (if this is how the ECS stores the entities). The set of tables typically stabilizes fast in an application, and thus matching happens very infrequently, even if entities are created / deleted often. If components are added or removed from entities, they will move to a different table.
+An example of a reactive ECS is Entitas.
 
-### Can I add / remove components to entities at any moment in time?
-This depends on the ECS framework. As systems are iterating over an array, making modifications to that array can have undesired side effects. It is important to understand how an ECS framework handles this, as this can lead to errors that are hard to debug.
+### How are components modified?
+There are usually two ways in which an ECS allows for modifying a component, which is either by modifying the component on a single entity, or modifying the component values of many entities in a system.
 
-### Can I create / delete entities at any moment in time?
-This depends on the ECS framework. As systems are iterating over an array, adding or deleting rows from that array can have undesired side effects. It is important to understand how an ECS framework handles this, as this can lead to errors that are hard to debug.
+An example of the first approach:
+```cpp
+entity.set<Position>({10, 20});
+```
 
-### Can ECS be used in multithreaded applications?
-This depends on the framework. Some ECS frameworks explicitly support multithreading (Unity, Specs, [flecs](https://github.com/SanderMertens/flecs)) while others are not thread safe and leave this up to the application.
+An example of the second approach:
+```cpp
+system<Position, Velocity>().each(
+    [](entity e, Position& p, Velocity & v) {
+        p.x += v.x;
+        p.y += v.y;
+    });
+```
 
-ECS frameworks that are multithreaded often take advantage of the fact that, since all data is stored in arrays, work can be easily distributed to worker threads.
+The second approach is generally faster as it requires less lookups, and can take advantage of efficient comopnent storage methods.
 
-### Can you define entity types?
-This depends on the framework, though usually ECS frameworks have the notion of "archetype" entites, or "tags". An archetype is a named group of components that a certain kind of entity always has. A tag is an empty component that is just there to be able to quickly identify entities.
+### How are entities matched with systems?
+There are three popular ways of implementing this.
 
-Care must be taken to not lend to much importance to entity types. A properly designed ECS application does not emphasize what an object _is_, but what an object _has_. If you find yourself in a situation where adding one component should prevent adding another component, you are probably trying to impose OOP on ECS (after all, an object can't be two things at once!).
+1. In an archetype-based ECS a query stores a list of matched tables, where a table can contain many entities. This approach has as advantage that as tables stabilize quickly, query evaluation overhead is reduced to zero on average.
 
-### Can I reuse the same component for multiple purposes?
-No. Entity Component Systems require a nominal type system, which is a fancy way of saying that types (components) are identified by name, and you should not reuse the same structure for different purposes. The reason for this is that a system subscribes for a component, and needs to be able to process the component data without context. Therefore, the meaning of a component must be consistent across all entities.
+2. In a sparse set ECS a query iterates all entities in one of the queried for components (usually the one with the least entities) and tests for each subsequent component if the entity has it. Bitset-based ECS implementations use a similar approach.
 
-Note however that while an _ECS framework_ must be able to uniquely identify components, you can still reuse the same _programming language_ type for different components. For example, if your application has a _type_ called `Vector2D`, you could register that type under the `Position` and `Velocity` _component_ identifiers.
+3. In a reactive ECS a system collects entities that have the right set of components by listening for signals that could cause an entity to match.
 
-### How do I run a system?
-This depends on the ECS framework. Some ECS frameworks require you to run your systems manually, whereas others run the systems for you. 
 
-### Can I run systems periodically?
-This depends on the ECS framework. Some ECS frameworks let you specify an interval at which systems are ran.
 
-### Can I run systems when component values change?
-This depends on the ECS framework. Some ECS frameworks let you define systems that are executed when components are assigned a value.
 
-### Can I run systems when I'm adding / removing components?
-This depends on the ECS framework. Some ECS frameworks let you define systems that are executed when components are added or removed.
+## Data Oriented Design
 
-### How do I specify the ordering of my systems?
-This depends on the ECS framework, but is an important part of ECS design. In an ideal world, systems have no dependencies and can be ran in any order. In practice however, this is seldomly the case. Each ECS framework approaches this problem differently. In Unity ECS for example, you can specify the dependencies of a system (systems that should run before the system).
+### What is Data Oriented Design
+Wikipedia defines Data Oriented Design as:
 
-Different strategies for ordering systems are:
-- Specify system dependencies, and let the ECS framework do automatic ordering
-- Specify system order manually
-- Assign systems to different stages, and execute the stages in a well-defined sequence
+> ... a program optimization approach motivated by efficient usage of the CPU cache, used in video game development. The approach is to focus on the data layout, separating and sorting fields according to when they are needed, and to think about transformations of data.
 
-### Do I have to read/write component data inside systems?
-No, though it may be faster to do so. When you access a component outside of a system, an ECS framework needs to do a lookup to first see if the entity has the component, and where it is stored. When components are accessed from inside a system, the ECS framework knows the interest of the system beforehand, and since data is stored in an array, it can precompute the locations of the components for you, which improves performance.
+### Is ECS the same as DoD?
+No. It is possible to write code that uses DoD principles without it being ECS, and it is possible to create an ECS that does not leverage DoD.
 
-Note that different ECS implementations may or may not choose to implement this optimization.
+The ECS pattern does lend itself well towards DoD, which is why many ECS frameworks (though not all) have a storage design that allows applications to leverage the optimizations enabled by DoD.
 
-### How do I specify parent-child relationships in ECS?
-This depends on the ECS framework.
+If an ECS iterates contiguous component arrays, it allows for leveraging DoD principles and optimizations.
 
-### How many entities, components and systems does a typical application have?
-This highly depends on the application. Anywhere between a dozen, hundreds, or maybe even thousands of components and systems. The number of entities is tightly coupled with how many "things" your game or simulation has.
+### What is Random Access Memory?
+RAM is the kind of memory that computers typically have lots of, and is where the entire state of applications and their code is stored. A CPU interfaces with RAM when it executes application code. 
 
-### How do I initialize component data?
-This depends on the ECS framework and programming language. An OOP language may let you initialize components in constructors. Other ECS frameworks may offer custom mechanisms for initializing data.
+While RAM is incredibly fast in absolute terms, the bus between a CPU and RAM can become a bottleneck in data-heavy applications. This is why in data oriented design, techniques are employed to minimize the number of loads from RAM.
+
+### What is a CPU cache?
+A CPU cache is a kind of memory that is much faster, but also _much_ smaller than RAM. When a CPU loads data from RAM it is stored in a cache tier, where lower tiers are faster and larger tiers are larger.
+
+Data oriented design employs techniques to utilize a CPU cache as efficiently as possible, so that the number of loads from RAM are minimized.
+
+### What is a cache line?
+A cache line represents the amount of data that is retrieved from RAM in a single load. When an application requests, say 4 bytes from RAM, a CPU will actually load 64 bytes, starting from the requested address.
+
+An application can reduce the number of loads from RAM by storing data in close proximity, which increases the chance that data required for future operations is already loaded in the cache.
+
+### What is locality of reference?
+Locality refers to either temporal or spatial locality. Temporal locality refers to the reuse of data within a short amount of time. Spatial locality refers to the proximity of storage locations. High locality in either category increases the efficiency of caching, as a CPU is better able to predict access patterns.
+
+### What is SIMD?
+SIMD, or single instruction multiple dispatch, refers to a set of instructions or instruction families that can process multiple values in the time it takes to do a single instruction.
+
+### What is vectorization?
+Vectorization (or automatic vectorization) is the process whereby code that meets certain criteria uses SIMD instructions to improve performance. As a result of using these optimized instructions, vectorized code can run multiple times faster than regular code.
+
+The conditions for vectorized code are:
+- Data must be stored contiguously (in arrays)
+- The code should contain no branches or function calls
+
+Compilers are generally able to vectorize loops that meet the above conditions. It depends on the compiler however which scenarios will be automatically vectorized. [This page](https://llvm.org/docs/Vectorizers.html) provides an overview of scenarios that the clang compiler is able to automatically vectorize.
+
+### What is false sharing?
+False sharing occurs when different threads attempt to load and alter two values that are different, but in the same cache line. This causes a cache sync, which can degrade performance.
+
+False sharing is avoided by ensuring that data accessed by different threads is not in close enough proximity for it to be loaded in a single cache line.
+
+### What is AoS?
+AoS, or "array of structs" refers to a memory layout where a struct containing multiple fields is stored in an array. An example of AoS is:
+
+```c
+struct AoS {
+  int m_1;
+  int m_2;
+};
+
+AoS values[1000];
+```
+
+An advantage of AoS is that data is stored in arrays which benefits cache locality. A potential disadvantage of AoS is that when code only requires a subset of members in a struct, more data is loaded into the cache than is strictly necessary.
+
+In the context of ECS, AoS usually refers to a memory layout where all components are stored in the same array.
+
+### What is SoA?
+SoA, or "struct of arrays" refers to a memory layout where a struct contains multiple arrays, one for each field. An example of SoA is:
+
+```c
+struct SoA {
+  int m_1[1000];
+  int m_2[1000];
+};
+
+SoA values;
+```
+
+Like AoS, data is stored in arrays which benefits cache locality. An additional advantage of SoA is that when code only needs a subset of members in a struct, the other members are not loaded in cache. A potential disadvantage of SoA is that if code randomly needs to access other members, it incurs more cache misses than AoS.
+
+In the context of ECS, SoA usually refers to a memory layout where components are stored in separate arrays.
+
+### What is branch prediction?
+When a CPU executes a set of instructions, it tries to predict which path the code will take, by taking an educated guess at how conditional statements (like if-else, switch) will be evaluated. These instructions are then preloaded into the instruction cache, and can even be executed in advance.
+
+When code contains many unpredictable branches, the branch predictor may often have to discard the precomputed results, which results in measurably slower code.
+
+## Glossary
+
+### Entity
+An entity in ECS represents a single "thing" in a game and is generally represented as a unique integer value.
+
+### Component
+A component is a datatype that can be added to or removed from entities. Components in ECS are generally plain data types and not encapsulated.
+
+### Tag
+A tag is a component that has no data.
+
+### System
+A system is an executable object that is matched with all entities that have a certain set of components. 
+
+### Query
+A query is similar to a system, but cannot be executed by itself.
+
+### World
+A world is the container for all ECS data. ECS frameworks often allow a single application to have multiple ECS worlds.
+
+### Archetype
+A data structure that stores entities for a specific set of components. Components are stored as columns in contiguous arrays. 
+
+### Table
+Same as an archetype.
+
+### Sparse set
+A data structure that provides fast iteration, lookup, insertion and removal times. Similar to a hashmap, but better suited for sequential identifiers.
+
