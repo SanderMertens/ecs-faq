@@ -92,6 +92,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Specs and Legion, two very different approaches to ECS](https://csherratt.github.io/blog/posts/specs-and-legion/) (Cora Sherrat)
 - [Archetypes and Vectorization](https://medium.com/@ajmmertens/building-an-ecs-2-archetypes-and-vectorization-fe21690805f9) (Sander Mertens)
 - [ECS back & forth](https://skypjack.github.io/2019-02-14-ecs-baf-part-1/) (Michele Caini, series)
+- [Sparse Set](https://www.geeksforgeeks.org/sparse-set/) (Geeks for Geeks)
 
 ## General Questions
 
