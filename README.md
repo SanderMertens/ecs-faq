@@ -71,6 +71,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Flecs](https://github.com/SanderMertens/flecs) (C/C++11, MIT)
 - [Hecs](https://github.com/Ralith/hecs) (Rust, MIT)
 - [Legion](https://github.com/amethyst/legion) (Rust, MIT)
+- [Nu](https://github.com/bryanedds/Nu) (F#, MIT)
 - [Our Machinery](https://ourmachinery.com/) (C, commercial license)
 - [Shipyard](https://github.com/leudz/shipyard) (Rust, Apache/MIT)
 - [Specs](https://github.com/amethyst/specs) (Rust, Apache/MIT)
