@@ -69,7 +69,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [EnTT](https://github.com/skypjack/entt) (C++17, MIT)
 - [Esper](https://github.com/benmoran56/esper) (Python, MIT)
 - [Flecs](https://github.com/SanderMertens/flecs) (C/C++11, MIT)
-- [Hecs](https://github.com/Ralith/hecs) (Rust, MIT)
+- [Hecs](https://github.com/Ralith/hecs) (Rust, Apache/MIT)
 - [Legion](https://github.com/amethyst/legion) (Rust, MIT)
 - [Nu](https://github.com/bryanedds/Nu) (F#, MIT)
 - [Our Machinery](https://ourmachinery.com/) (C, commercial license)
