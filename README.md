@@ -93,6 +93,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Archetypes and Vectorization](https://medium.com/@ajmmertens/building-an-ecs-2-archetypes-and-vectorization-fe21690805f9) (Sander Mertens, blog)
 - [ECS back & forth](https://skypjack.github.io/2019-02-14-ecs-baf-part-1/) (Michele Caini, blog series)
 - [Sparse Set](https://www.geeksforgeeks.org/sparse-set/) (Geeks for Geeks)
+- [Hibitset](https://docs.rs/hibitset/0.6.3/hibitset/) (DOCS.RS)
 
 ## General Questions
 
@@ -251,7 +252,7 @@ A sparse set based ECS stores each component in its own sparse set which is has 
 Examples of sparse set implementations are [EnTT](https://github.com/skypjack/entt) and [Shipyard](https://github.com/leudz/shipyard).
 
 #### Bitset based ECS
-A bitset-based ECS stores components in arrays where the entity id is used as index, and uses a bitset to indicate if an entity has a specific component.
+A bitset-based ECS stores components in arrays where the entity id is used as index, and uses a bitset to indicate if an entity has a specific component. Different flavors of bitset-based approaches exist. One approach is to have an array for each component with an accompanying bitset to indicate which entities have the component. Another approach uses the [hibitset](#hibitset) data structure (see link).
 
 Examples of bitset implementations are [EntityX](https://github.com/alecthomas/entityx) and [Specs](https://github.com/amethyst/specs).
 
