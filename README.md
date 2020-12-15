@@ -136,6 +136,7 @@ A number of commercial projects and engines today use or have used ECS. If you k
 - [Survival City](https://play.google.com/store/apps/details?id=com.playstack.survivalcity&hl=en&gl=US) (Game, uses Entitas)
 - [Penko Park](https://store.steampowered.com/app/852090/Penko_Park) (Game, uses Entitas)
 - [Doomsday Vault](https://apps.apple.com/us/app/doomsday-vault/id1457773760) (Game, uses Entitas)
+- [Phantom Brigade](https://www.youtube.com/watch?v=uHsh9kWQeDc&ab_channel=BraceYourselfGames) (Game, uses Entitas)
 - [Minecraft Bedrock](https://minecraft.gamepedia.com/Bedrock_Edition) (Game, uses EnTT)
 - [ArcGIS](https://developers.arcgis.com/arcgis-runtime/) (Framework, uses EnTT)
 - [FastSuite](https://www.fastsuite.com/) (Simulation, uses EnTT)
