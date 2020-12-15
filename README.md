@@ -66,6 +66,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Bevy ECS](https://github.com/bevyengine/bevy) (Rust, MIT)
 - [EntityX](https://github.com/alecthomas/entityx) (C++11, MIT)
 - [Entitas](https://github.com/sschmid/Entitas-CSharp) (C#, MIT)
+- [Entitas-Redux](https://github.com/jeffcampbellmakesgames/Entitas-Redux) (C#, MIT)
 - [EnTT](https://github.com/skypjack/entt) (C++17, MIT)
 - [Esper](https://github.com/benmoran56/esper) (Python, MIT)
 - [Flecs](https://github.com/SanderMertens/flecs) (C/C++11, MIT)
