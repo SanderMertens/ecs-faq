@@ -134,6 +134,7 @@ A number of commercial projects and engines today use or have used ECS. If you k
 - [Overwatch](https://playoverwatch.com/en-us/) (Game, uses custom ECS)
 - [Survival City](https://play.google.com/store/apps/details?id=com.playstack.survivalcity&hl=en&gl=US) (Game, uses Entitas)
 - [Minecraft Bedrock](https://minecraft.gamepedia.com/Bedrock_Edition) (Game, uses EnTT)
+- [War of Rights](https://store.steampowered.com/app/424030/War_of_Rights/) (Game, uses EnTT)
 - [Bebylon](https://bebylon.world/) (Game, uses Flecs)
 
 ### How is ECS different from OOP?
