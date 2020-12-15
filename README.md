@@ -69,6 +69,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Entitas-Redux](https://github.com/jeffcampbellmakesgames/Entitas-Redux) (C#, MIT)
 - [EnTT](https://github.com/skypjack/entt) (C++17, MIT)
 - [Esper](https://github.com/benmoran56/esper) (Python, MIT)
+- [Fireblade](https://github.com/fireblade-engine/ecs) (Swift, MIT)
 - [Flecs](https://github.com/SanderMertens/flecs) (C/C++11, MIT)
 - [Hecs](https://github.com/Ralith/hecs) (Rust, Apache/MIT)
 - [Legion](https://github.com/amethyst/legion) (Rust, MIT)
