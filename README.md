@@ -4,7 +4,7 @@ This FAQ is for anyone interested in ECS & modern, high performance game develop
 If you find anything missing or incorrect in the FAQ, feel free to create an issue or PR!
 
 ## About me
-I'm the author of Flecs, an Entity Component System for C & C++. I'm always experimenting with better ways to implement ECS features, and write about it if I can. If you're interested in discussing ECS, [join the Discord](https://discord.gg/BEzP5Rgrrp)!
+I'm the author of [Flecs](https://github.com/SanderMertens/flecs), an Entity Component System for C & C++. I'm always experimenting with better ways to implement ECS features, and write about it if I can. If you're interested in discussing ECS, [join the Discord](https://discord.gg/BEzP5Rgrrp)!
 
 ## General Questions
 - [What is ECS?](#what-is-ecs)
@@ -125,14 +125,14 @@ There are a number of reasons why ECS is gaining popularity amongst game develop
 ### Who is using ECS?
 A number of commercial projects and engines today use or have used ECS. If you know of other projects that uses ECS, let me know!
 
-- Unity (DOTS)
-- Unreal (Sequencer)
-- Our Machinery
-- Bevy
-- Amethyst
-- Overwatch
-- Minecraft Bedrock
-- Bebylon
+- [Unity DOTS](https://unity.com/dots) (Engine)
+- [Unreal (Sequencer)](https://www.unrealengine.com/en-US/tech-blog/performance-at-scale-sequencer-in-unreal-engine-4-26) (Engine)
+- [Our Machinery](https://ourmachinery.com/) (Engine)
+- [Bevy](https://bevyengine.org/) (Engine)
+- [Amethyst](https://amethyst.rs/) (Engine)
+- [Overwatch](https://playoverwatch.com/en-us/) (Game, uses custom ECS)
+- [Minecraft Bedrock](https://minecraft.gamepedia.com/Bedrock_Edition) (Game, uses EnTT)
+- [Bebylon](https://bebylon.world/) (Game, uses Flecs)
 
 ### How is ECS different from OOP?
 ECS is often described as an alternative to Object Oriented Programming. While ECS and OOP overlap, there are differences that impact how applications are designed:
@@ -243,17 +243,17 @@ There are many different ways in which to implement an ECS, each with different 
 #### Archetypes (aka "Dense ECS" or "Table based ECS")
 An archetype ECS stores entities in tables, where components are columns and entities are rows. Archetype implementations are fast to query and iterate.
 
-Examples of archetype implementations are Flecs (C/C++), Our Machinery (C), Unity DOTS (C#)Unreal Sequencer (C++), Bevy ECS (Rust), Legion (Rust) and Hecs (Rust).
+Examples of archetype implementations are [Flecs (C/C++)](https://github.com/SanderMertens/flecs), [Our Machinery (C)](https://ourmachinery.com/), [Unity DOTS (C#)](https://unity.com/dots), [Unreal Sequencer (C++)](https://www.unrealengine.com/en-US/tech-blog/performance-at-scale-sequencer-in-unreal-engine-4-26), [Bevy ECS (Rust)](https://bevyengine.org/), [Legion (Rust)](https://github.com/amethyst/legion) and [Hecs (Rust)](https://github.com/Ralith/hecs).
 
 #### Sparse set ECS (aka "Sparse ECS")
 A sparse set based ECS stores each component in its own sparse set which is has the entity id as key. Sparse set implementations allow for fast add/remove operations.
 
-Examples of sparse set implementations are EnTT (C++) and Shipyard (Rust).
+Examples of sparse set implementations are [EnTT (C++)](https://github.com/skypjack/entt) and [Shipyard (Rust)](https://github.com/leudz/shipyard).
 
 #### Bitset based ECS
 A bitset-based ECS stores components in arrays where the entity id is used as index, and uses a bitset to indicate if an entity has a specific component.
 
-Examples of bitset implementations are EntityX (C++) and Specs (Rust).
+Examples of bitset implementations are [EntityX (C++)](https://github.com/alecthomas/entityx) and [Specs (Rust)](https://github.com/amethyst/specs).
 
 #### Reactive ECS
 A reactive ECS uses signals resulting from entity mutations to keep track of which entities match systems/queries.
