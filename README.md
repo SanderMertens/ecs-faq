@@ -132,6 +132,7 @@ A number of commercial projects and engines today use or have used ECS. If you k
 - [Bevy](https://bevyengine.org/) (Engine)
 - [Amethyst](https://amethyst.rs/) (Engine)
 - [Overwatch](https://playoverwatch.com/en-us/) (Game, uses custom ECS)
+- [Survival City](https://play.google.com/store/apps/details?id=com.playstack.survivalcity&hl=en&gl=US) (Game, uses Entitas)
 - [Minecraft Bedrock](https://minecraft.gamepedia.com/Bedrock_Edition) (Game, uses EnTT)
 - [Bebylon](https://bebylon.world/) (Game, uses Flecs)
 
