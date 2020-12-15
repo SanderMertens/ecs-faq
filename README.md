@@ -243,22 +243,22 @@ There are many different ways in which to implement an ECS, each with different 
 #### Archetypes (aka "Dense ECS" or "Table based ECS")
 An archetype ECS stores entities in tables, where components are columns and entities are rows. Archetype implementations are fast to query and iterate.
 
-Examples of archetype implementations are [Flecs (C/C++)](https://github.com/SanderMertens/flecs), [Our Machinery (C)](https://ourmachinery.com/), [Unity DOTS (C#)](https://unity.com/dots), [Unreal Sequencer (C++)](https://www.unrealengine.com/en-US/tech-blog/performance-at-scale-sequencer-in-unreal-engine-4-26), [Bevy ECS (Rust)](https://bevyengine.org/), [Legion (Rust)](https://github.com/amethyst/legion) and [Hecs (Rust)](https://github.com/Ralith/hecs).
+Examples of archetype implementations are [Flecs](https://github.com/SanderMertens/flecs), [Our Machinery](https://ourmachinery.com/), [Unity DOTS](https://unity.com/dots), [Unreal Sequencer](https://www.unrealengine.com/en-US/tech-blog/performance-at-scale-sequencer-in-unreal-engine-4-26), [Bevy ECS](https://bevyengine.org/), [Legion](https://github.com/amethyst/legion) and [Hecs](https://github.com/Ralith/hecs).
 
 #### Sparse set ECS (aka "Sparse ECS")
 A sparse set based ECS stores each component in its own sparse set which is has the entity id as key. Sparse set implementations allow for fast add/remove operations.
 
-Examples of sparse set implementations are [EnTT (C++)](https://github.com/skypjack/entt) and [Shipyard (Rust)](https://github.com/leudz/shipyard).
+Examples of sparse set implementations are [EnTT](https://github.com/skypjack/entt) and [Shipyard](https://github.com/leudz/shipyard).
 
 #### Bitset based ECS
 A bitset-based ECS stores components in arrays where the entity id is used as index, and uses a bitset to indicate if an entity has a specific component.
 
-Examples of bitset implementations are [EntityX (C++)](https://github.com/alecthomas/entityx) and [Specs (Rust)](https://github.com/amethyst/specs).
+Examples of bitset implementations are [EntityX](https://github.com/alecthomas/entityx) and [Specs](https://github.com/amethyst/specs).
 
 #### Reactive ECS
 A reactive ECS uses signals resulting from entity mutations to keep track of which entities match systems/queries.
 
-An example of a reactive ECS is Entitas.
+An example of a reactive ECS is [Entitas](https://github.com/sschmid/Entitas-CSharp).
 
 ### How are components modified?
 There are usually two ways in which an ECS allows for modifying a component, which is either by modifying the component on a single entity, or modifying the component values of many entities in a system.
