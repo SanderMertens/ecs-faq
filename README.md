@@ -134,8 +134,8 @@ A number of commercial projects and engines today use or have used ECS. If you k
 - [Overwatch](https://playoverwatch.com/en-us/) (Game, uses custom ECS)
 - [Survival City](https://play.google.com/store/apps/details?id=com.playstack.survivalcity&hl=en&gl=US) (Game, uses Entitas)
 - [Minecraft Bedrock](https://minecraft.gamepedia.com/Bedrock_Edition) (Game, uses EnTT)
-- [ArcGIS](https://developers.arcgis.com/arcgis-runtime/) (framework, uses EnTT)
-- [FastSuite](https://www.fastsuite.com/) (simulation, uses EnTT)
+- [ArcGIS](https://developers.arcgis.com/arcgis-runtime/) (Framework, uses EnTT)
+- [FastSuite](https://www.fastsuite.com/) (Simulation, uses EnTT)
 - [Bebylon](https://bebylon.world/) (Game, uses Flecs)
 
 ### How is ECS different from OOP?
