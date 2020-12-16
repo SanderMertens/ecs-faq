@@ -141,6 +141,7 @@ A number of commercial projects and engines today use or have used ECS. If you k
 - [Doomsday Vault](https://apps.apple.com/us/app/doomsday-vault/id1457773760) (Game, uses Entitas)
 - [Phantom Brigade](https://www.youtube.com/watch?v=uHsh9kWQeDc&ab_channel=BraceYourselfGames) (Game, uses Entitas)
 - [Minecraft Bedrock](https://minecraft.gamepedia.com/Bedrock_Edition) (Game, uses EnTT)
+- [War of Rights](https://store.steampowered.com/app/424030/War_of_Rights/) (Game, uses EnTT)
 - [ArcGIS](https://developers.arcgis.com/arcgis-runtime/) (Framework, uses EnTT)
 - [FastSuite](https://www.fastsuite.com/) (Simulation, uses EnTT)
 - [RoboCraft](https://robocraftgame.com/) (Game, uses Svelto)
