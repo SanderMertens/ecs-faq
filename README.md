@@ -446,6 +446,9 @@ A query is similar to a system, but cannot be executed by itself.
 ### World
 A world is the container for all ECS data. ECS frameworks often allow a single application to have multiple ECS worlds.
 
+### Registry
+Same as world.
+
 ### Archetype
 A data structure that stores entities for a specific set of components. Components are stored as columns in contiguous arrays. 
 
