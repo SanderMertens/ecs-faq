@@ -75,6 +75,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Legion](https://github.com/amethyst/legion) (Rust, MIT)
 - [Nu](https://github.com/bryanedds/Nu) (F#, MIT)
 - [Our Machinery](https://ourmachinery.com/) (C, commercial license)
+- [Photon Quantum](https://doc.photonengine.com/en-us/quantum/current/getting-started/quantum-intro) (C#, Commercial license)
 - [Shipyard](https://github.com/leudz/shipyard) (Rust, Apache/MIT)
 - [Specs](https://github.com/amethyst/specs) (Rust, Apache/MIT)
 - [Svelto](https://github.com/sebas77/Svelto.ECS) (C#, MIT)
