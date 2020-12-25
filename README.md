@@ -133,6 +133,7 @@ A number of commercial projects and engines today use or have used ECS. If you k
 - [Unity DOTS](https://unity.com/dots) (Engine)
 - [Unreal (Sequencer)](https://www.unrealengine.com/en-US/tech-blog/performance-at-scale-sequencer-in-unreal-engine-4-26) (Engine)
 - [Our Machinery](https://ourmachinery.com/) (Engine)
+- [Photon Quantum](https://doc.photonengine.com/en-us/quantum/current/getting-started/quantum-intro) (Engine)
 - [Bevy](https://bevyengine.org/) (Engine)
 - [Amethyst](https://amethyst.rs/) (Engine)
 - [Overwatch](https://playoverwatch.com/en-us/) (Game, uses custom ECS)
