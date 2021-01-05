@@ -139,7 +139,7 @@ A number of commercial projects and engines today use or have used ECS. If you k
 - [Bevy](https://bevyengine.org/) (Engine)
 - [Amethyst](https://amethyst.rs/) (Engine)
 - [Overwatch](https://playoverwatch.com/en-us/) (Game, uses custom ECS)
-- [Xenonauts](https://store.steampowered.com/app/223830/Xenonauts/) (Game, uses internal ECS)
+- [Xenonauts](https://store.steampowered.com/app/223830/Xenonauts/) (Game, uses custom ECS)
 - [Survival City](https://play.google.com/store/apps/details?id=com.playstack.survivalcity&hl=en&gl=US) (Game, uses Entitas)
 - [Penko Park](https://store.steampowered.com/app/852090/Penko_Park) (Game, uses Entitas)
 - [Doomsday Vault](https://apps.apple.com/us/app/doomsday-vault/id1457773760) (Game, uses Entitas)
