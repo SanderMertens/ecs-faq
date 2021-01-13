@@ -209,7 +209,7 @@ Having said that, the time spent on writing ECS code is offset by time savings a
 ### Is ECS good for low level code?
 Low level engine code such as rendering and physics may want to use advanced features of the underlying hardware such as vectorization, while optimizing cache locality. Some ECS frameworks are better suited for this than others. 
 
-Generally speaking, when an ECS provides access to raw component arrays, it lends itself better towards low-level optimizations. Another deciding factor, especially in modern games, is how easiy it is to multithread such systems.
+Generally speaking, when an ECS provides access to raw component arrays, it lends itself better towards low-level optimizations. Another deciding factor, especially in modern games, is how easy it is to multithread such systems.
 
 ### Can ECS be implemented in any language?
 Yes.
