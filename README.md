@@ -252,7 +252,7 @@ Designing an ECS application starts with creating the components (data structure
 
 - How many instances of the data will exist
 - How often is data accessed
-- How often does data change
+- How often is the data mutated
 - When does data need to be accessed/mutated
 - Which data is accessed/mutated together
 - What is the cardinality of the data
