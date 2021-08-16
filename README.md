@@ -299,7 +299,7 @@ system<Position, Velocity>().each(
     });
 ```
 
-The second approach is generally faster as it requires less lookups, and can take advantage of efficient comopnent storage methods.
+The second approach is generally faster as it requires less lookups, and can take advantage of efficient component storage methods.
 
 ### How are entities matched with systems?
 There are three popular ways of implementing this.
