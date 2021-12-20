@@ -82,6 +82,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Svelto](https://github.com/sebas77/Svelto.ECS) (C#, MIT)
 - [tiny-ecs](https://github.com/bakpakin/tiny-ecs) (Lua, MIT)
 - [Unity DOTS](https://unity.com/dots) (C#, commercial license)
+- [Zig ECS](https://github.com/prime31/zig-ecs) (Zig, MIT)
 
 ## Resources
 - [Overwatch Gameplay Architecture and Netcode](https://www.youtube.com/watch?v=W3aieHjyNvw) (Blizzard, GDC)
