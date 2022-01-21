@@ -355,6 +355,11 @@ Wikipedia defines Data Oriented Design as:
 
 > ... a program optimization approach motivated by efficient usage of the CPU cache, used in video game development. The approach is to focus on the data layout, separating and sorting fields according to when they are needed, and to think about transformations of data.
 
+Data oriented design is an umbrella term for a large collections of techniques and conditions under which those techniques should be used. In general the goal is to analyse the access patterns of the different kinds of data in an application, and select data structures that _for those access patterns_ optimally leverage the underlying hardware. Hardware optimizations are often related (but not limited) to optimizing usage of the CPU cache, limit loading/storing to RAM (cache misses) and usage of SIMD instructions.
+
+A comprehensive overview of Data oriented design is the "Data oriented design" book by Richard Fabian:
+[https://www.dataorienteddesign.com/dodbook/](https://www.dataorienteddesign.com/dodbook/)
+
 ### Is ECS the same as DoD?
 No. It is possible to write code that uses DoD principles without it being ECS, and it is possible to create an ECS that does not leverage DoD.
 
