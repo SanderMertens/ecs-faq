@@ -83,7 +83,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [tiny-ecs](https://github.com/bakpakin/tiny-ecs) (Lua, MIT)
 - [Unity DOTS](https://unity.com/dots) (C#, commercial license)
 - [Zig ECS](https://github.com/prime31/zig-ecs) (Zig, MIT)
-
+- [luaecs](https://github.com/cloudwu/luaecs) (C/Lua, MIT)
 ## Resources
 - [Overwatch Gameplay Architecture and Netcode](https://www.youtube.com/watch?v=W3aieHjyNvw) (Blizzard, GDC)
 - [Data-Oriented Design and C++](https://www.youtube.com/watch?v=rX0ItVEVjHc) (Mike Acton, CppCon)
