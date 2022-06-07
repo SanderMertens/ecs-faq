@@ -64,6 +64,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [AFRAME](https://aframe.io) (HTML5/JS, MIT)
 - [Artemis](https://github.com/junkdog/artemis-odb) (Java, custom license)
 - [Bevy ECS](https://github.com/bevyengine/bevy) (Rust, MIT)
+- [Dominion](https://github.com/dominion-dev/dominion-ecs-java) (Java, MIT)
 - [EntityX](https://github.com/alecthomas/entityx) (C++11, MIT)
 - [Entitas](https://github.com/sschmid/Entitas-CSharp) (C#, MIT)
 - [Entitas-Redux](https://github.com/jeffcampbellmakesgames/Entitas-Redux) (C#, MIT)
