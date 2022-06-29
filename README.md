@@ -28,6 +28,7 @@ I'm the author of [Flecs](https://github.com/SanderMertens/flecs), an Entity Com
 - [What are the different ways to implement an ECS?](#what-are-the-different-ways-to-implement-an-ecs)
 - [How are components modified?](#how-are-components-modified)
 - [How are entities matched with systems?](#how-are-entities-matched-with-systems)
+- [What are entity relationships?](#what-are-entity-relationships)
 
 ## How-to
 - [How to create a hierarchy in ECS?](#how-to-create-a-hierarchy-in-ecs)
@@ -311,6 +312,15 @@ There are three popular ways of implementing this.
 2. In a sparse set ECS a query iterates all entities in one of the queried for components (usually the one with the least entities) and tests for each subsequent component if the entity has it. Bitset-based ECS implementations use a similar approach.
 
 3. In a reactive ECS a system collects entities that have the right set of components by listening for signals that could cause an entity to match.
+
+### What are entity relationships?
+Entity relationships are an extension to the ECS model where in addition to adding components, a pair of things can be added to an entity. A simple example of a relationship might look like this:
+
+```c
+alice.add<Likes>(bob);
+```
+
+In this example "Likes, Apples" is the pair, "Likes" is a relationship kind and "bob" is the relationship target. Both "alice" and "bob" are regular entities. For more information on ECS relationships, see [this article](https://ajmmertens.medium.com/building-games-in-ecs-with-entity-relationships-657275ba2c6c).
 
 ## How-to
 
