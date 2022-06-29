@@ -320,7 +320,7 @@ Entity relationships are an extension to the ECS model where in addition to addi
 alice.add<Likes>(bob);
 ```
 
-In this example "Likes, Apples" is the pair, "Likes" is a relationship kind and "bob" is the relationship target. Both "alice" and "bob" are regular entities. For more information on ECS relationships, see [this article](https://ajmmertens.medium.com/building-games-in-ecs-with-entity-relationships-657275ba2c6c).
+In this example "Likes, bob" is the pair, "Likes" is a relationship kind and "bob" is the relationship target. Both "alice" and "bob" are regular entities. For more information on ECS relationships, see [this article](https://ajmmertens.medium.com/building-games-in-ecs-with-entity-relationships-657275ba2c6c).
 
 ## How-to
 
