@@ -477,7 +477,7 @@ Same as world.
 A data structure that stores entities for a specific set of components. Components are stored as columns in contiguous arrays. 
 
 ### Table
-Same as an archetype.
+Often used interchangeably with archetype. In some ECS implementations a table refers to an archetype that stores "dense" components (contiguous arrays with aligned indices), where an archetype stores "sparse" components (components not contiguously stored, or not stored with aligned indices) and indexes into a table.
 
 ### Sparse set
 A data structure that provides fast iteration, lookup, insertion and removal times. Similar to a hashmap, but better suited for sequential identifiers.
