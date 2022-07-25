@@ -397,7 +397,7 @@ An application can reduce the number of loads from RAM by storing data in close 
 Locality refers to either temporal or spatial locality. Temporal locality refers to the reuse of data within a short amount of time. Spatial locality refers to the proximity of storage locations. High locality in either category increases the efficiency of caching, as a CPU is better able to predict access patterns.
 
 ### What is SIMD?
-SIMD, or single instruction multiple dispatch, refers to a set of instructions or instruction families that can process multiple values in the time it takes to do a single instruction.
+SIMD, or Single Instruction Multiple Data, refers to a set of instructions or instruction families that can process multiple values in the time it takes to do a single instruction.
 
 ### What is vectorization?
 Vectorization (or automatic vectorization) is the process whereby code that meets certain criteria uses SIMD instructions to improve performance. As a result of using these optimized instructions, vectorized code can run multiple times faster than regular code.
