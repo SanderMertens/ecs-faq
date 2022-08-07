@@ -86,6 +86,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Unity DOTS](https://unity.com/dots) (C#, commercial license)
 - [Zig ECS](https://github.com/prime31/zig-ecs) (Zig, MIT)
 - [luaecs](https://github.com/cloudwu/luaecs) (C/Lua, MIT)
+
 ## Resources
 - [Overwatch Gameplay Architecture and Netcode](https://www.youtube.com/watch?v=W3aieHjyNvw) (Blizzard, GDC)
 - [Data-Oriented Design and C++](https://www.youtube.com/watch?v=rX0ItVEVjHc) (Mike Acton, CppCon)
@@ -101,7 +102,11 @@ The current list includes both open and closed source ECS implementations, and e
 - [Formalisation of Concepts behind ECS and Entitas](https://medium.com/@icex33/formalisation-of-concepts-behind-ecs-and-entitas-8efe535d9516) (Maxim Zaks, blog)
 - [Entity Component System and Rendering](https://ourmachinery.com/post/ecs-and-rendering/) (Our Machinery, blog)
 - [Specs and Legion, two very different approaches to ECS](https://csherratt.github.io/blog/posts/specs-and-legion/) (Cora Sherrat, blog)
+- [Where are my Entities and Components](https://ajmmertens.medium.com/building-an-ecs-1-where-are-my-entities-and-components-63d07c7da742) (Sander Mertens, blog)
 - [Archetypes and Vectorization](https://medium.com/@ajmmertens/building-an-ecs-2-archetypes-and-vectorization-fe21690805f9) (Sander Mertens, blog)
+- [Building Games with Entity Relationships](https://ajmmertens.medium.com/building-games-in-ecs-with-entity-relationships-657275ba2c6c) (Sander Mertens, blog)
+- [Making the most of Entity Identifiers](https://ajmmertens.medium.com/doing-a-lot-with-a-little-ecs-identifiers-25a72bd2647) (Sander Mertens, blog)
+- [Why Storing State Machines in ECS is a Bad Idea](https://ajmmertens.medium.com/why-storing-state-machines-in-ecs-is-a-bad-idea-742de7a18e59) (Sander Mertens, blog)
 - [ECS back & forth](https://skypjack.github.io/2019-02-14-ecs-baf-part-1/) (Michele Caini, blog series)
 - [Sparse Set](https://www.geeksforgeeks.org/sparse-set/) (Geeks for Geeks)
 - [Hibitset](https://docs.rs/hibitset/0.6.3/hibitset/) (DOCS.RS)
