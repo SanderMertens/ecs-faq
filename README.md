@@ -163,6 +163,9 @@ A number of commercial projects and engines today use or have used ECS. If you k
 - [GameCraft](https://store.steampowered.com/app/1078000/Gamecraft/) (Game, uses Svelto)
 - [CardLife](http://cardlifegame.com/) (Game, uses Svelto)
 - [Bebylon](https://bebylon.world/) (Game, uses Flecs)
+- [The Forge](https://github.com/ConfettiFX/The-Forge) (Rendering Engine, uses Flecs)
+- [Territory Control](https://store.steampowered.com/app/690290/Territory_Control_2/) (Game, uses Flecs)
+- [Sol Survivor](https://nicok.itch.io/sol-survivor-demo) (Game, uses Flecs)
 
 ### How is ECS different from OOP?
 ECS is often described as an alternative to Object Oriented Programming. While ECS and OOP overlap, there are differences that impact how applications are designed:
