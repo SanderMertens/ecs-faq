@@ -276,7 +276,7 @@ There are many different ways in which to implement an ECS, each with different 
 #### Archetypes (aka "Dense ECS" or "Table based ECS")
 An archetype ECS stores entities in tables, where components are columns and entities are rows. Archetype implementations are fast to query and iterate.
 
-Examples of archetype implementations are [Flecs](https://github.com/SanderMertens/flecs), [Our Machinery](https://ourmachinery.com/), [Unity DOTS](https://unity.com/dots), [Unreal Sequencer](https://www.unrealengine.com/en-US/tech-blog/performance-at-scale-sequencer-in-unreal-engine-4-26), [Bevy ECS](https://bevyengine.org/), [Legion](https://github.com/amethyst/legion) and [Hecs](https://github.com/Ralith/hecs).
+Examples of archetype implementations are [Flecs](https://github.com/SanderMertens/flecs), [Our Machinery](https://ourmachinery.com/), [Unity DOTS](https://unity.com/dots), [Unreal Sequencer](https://www.unrealengine.com/en-US/tech-blog/performance-at-scale-sequencer-in-unreal-engine-4-26), [Unreal Mass](https://docs.unrealengine.com/5.0/en-US/overview-of-mass-entity-in-unreal-engine/), [Bevy ECS](https://bevyengine.org/), [Legion](https://github.com/amethyst/legion) and [Hecs](https://github.com/Ralith/hecs).
 
 #### Sparse set ECS (aka "Sparse ECS")
 A sparse set based ECS stores each component in its own sparse set which is has the entity id as key. Sparse set implementations allow for fast add/remove operations.
