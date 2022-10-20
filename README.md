@@ -173,7 +173,7 @@ ECS is often described as an alternative to Object Oriented Programming. While E
 - Inheritance is a 1st class citizen in OOP, composition is a 1st class citizen in ECS.
 - OOP encourages encapsulation of data, ECS encourages exposed POD (plain old data) objects.
 - OOP colocates data with behavior, ECS separates data from behavior.
-- OOP Object instances are of a single static type, entities can have multiple, dynamically changing components
+- OOP Object instances are of a single static type, ECS entities can have multiple, dynamically changing components
 
 It should be noted that some have argued that ECS fits the characterisics of _Object Oriented Design_ (see https://www.gamedev.net/blogs/entry/2265481-oop-is-dead-long-live-oop/) and should therefore be considered a subset. 
 
