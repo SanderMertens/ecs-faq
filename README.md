@@ -77,6 +77,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Hecs](https://github.com/Ralith/hecs) (Rust, Apache/MIT)
 - [Legion](https://github.com/amethyst/legion) (Rust, MIT)
 - [LeoECS](https://github.com/Leopotam/ecs) (C#, MIT)
+- [Mach ECS](https://github.com/hexops/mach) (Zig, MIT, Apache)
 - [Nu](https://github.com/bryanedds/Nu) (F#, MIT)
 - [Photon Quantum](https://doc.photonengine.com/en-us/quantum/current/getting-started/quantum-intro) (C#, Commercial license)
 - [Shipyard](https://github.com/leudz/shipyard) (Rust, Apache/MIT)
