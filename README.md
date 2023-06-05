@@ -63,6 +63,8 @@ I'm the author of [Flecs](https://github.com/SanderMertens/flecs), an Entity Com
 The current list includes both open and closed source ECS implementations, and engines that have adopted ECS pattern. Projects that had no activity in the past year are not included.
 
 - [AFRAME](https://aframe.io) (HTML5/JS, MIT)
+- [Arch](https://github.com/genaray/Arch) (C#, Apache)
+- [Arche](https://github.com/mlange-42/arche) (Go, MIT)
 - [Artemis](https://github.com/junkdog/artemis-odb) (Java, custom license)
 - [Bevy ECS](https://github.com/bevyengine/bevy) (Rust, MIT)
 - [Dominion](https://github.com/dominion-dev/dominion-ecs-java) (Java, MIT)
