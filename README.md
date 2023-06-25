@@ -75,7 +75,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Fireblade](https://github.com/fireblade-engine/ecs) (Swift, MIT)
 - [Flecs](https://github.com/SanderMertens/flecs) (C/C++11, [C#](https://github.com/flecs-hub/flecs-cs), [Rust](https://github.com/jazzay/flecs-rs), [Zig](https://github.com/prime31/zig-flecs), [Lua](https://github.com/flecs-hub/flecs-lua), MIT)
 - [Hecs](https://github.com/Ralith/hecs) (Rust, Apache/MIT)
-- [LeoECS](https://github.com/Leopotam/ecs) (C#, MIT)
+- [LeoEcsLite](https://github.com/Leopotam/ecslite) (C#, MIT)
 - [Mach ECS](https://github.com/hexops/mach) (Zig, MIT, Apache)
 - [Nu](https://github.com/bryanedds/Nu) (F#, MIT)
 - [Photon Quantum](https://doc.photonengine.com/en-us/quantum/current/getting-started/quantum-intro) (C#, Commercial license)
@@ -94,6 +94,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Entitas-Redux](https://github.com/jeffcampbellmakesgames/Entitas-Redux) (C#, MIT)
 - [Legion](https://github.com/amethyst/legion) (Rust, MIT)
 - [tiny-ecs](https://github.com/bakpakin/tiny-ecs) (Lua, MIT)
+- [LeoECS](https://github.com/Leopotam/ecs) (C#, MIT)
 
 ## Resources
 - [Overwatch Gameplay Architecture and Netcode](https://www.youtube.com/watch?v=W3aieHjyNvw) (Blizzard, GDC)
