@@ -87,6 +87,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Unreal Mass](https://docs.unrealengine.com/5.0/en-US/overview-of-mass-entity-in-unreal-engine/) (C++, Commercial license)
 - [Zig ECS](https://github.com/prime31/zig-ecs) (Zig, MIT)
 - [luaecs](https://github.com/cloudwu/luaecs) (C/Lua, MIT)
+- [Morpeh](https://github.com/scellecs/morpeh) (C#, MIT)
 
 ### Inactive projects
 - [Artemis](https://github.com/junkdog/artemis-odb) (Java, custom license)
