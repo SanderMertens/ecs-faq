@@ -88,13 +88,14 @@ The current list includes both open and closed source ECS implementations, and e
 - [Zig ECS](https://github.com/prime31/zig-ecs) (Zig, MIT)
 - [luaecs](https://github.com/cloudwu/luaecs) (C/Lua, MIT)
 - [Morpeh](https://github.com/scellecs/morpeh) (C#, MIT)
+- [ME.ECS](https://github.com/chromealex/ecs) (C#, MIT)
 
 ### Inactive projects
 - [Artemis](https://github.com/junkdog/artemis-odb) (Java, custom license)
 - [Entitas-Redux](https://github.com/jeffcampbellmakesgames/Entitas-Redux) (C#, MIT)
 - [Legion](https://github.com/amethyst/legion) (Rust, MIT)
 - [tiny-ecs](https://github.com/bakpakin/tiny-ecs) (Lua, MIT)
-- [LeoECS](https://github.com/Leopotam/ecs) (C#, MIT)
+- [LeoECS](https://github.com/Leopotam/ecs) (C#, MIT-NA)
 
 ## Resources
 - [Overwatch Gameplay Architecture and Netcode](https://www.youtube.com/watch?v=W3aieHjyNvw) (Blizzard, GDC)
