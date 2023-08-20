@@ -74,6 +74,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Esper](https://github.com/benmoran56/esper) (Python, MIT)
 - [Fireblade](https://github.com/fireblade-engine/ecs) (Swift, MIT)
 - [Flecs](https://github.com/SanderMertens/flecs) (C/C++11, [C#](https://github.com/flecs-hub/flecs-cs), [Rust](https://github.com/jazzay/flecs-rs), [Zig](https://github.com/prime31/zig-flecs), [Lua](https://github.com/flecs-hub/flecs-lua), MIT)
+- [Fleks](https://github.com/Quillraven/Fleks) (Kotlin Multiplatform, MIT)
 - [Hecs](https://github.com/Ralith/hecs) (Rust, Apache/MIT)
 - [LeoEcsLite](https://github.com/Leopotam/ecslite) (C#, MIT)
 - [Mach ECS](https://github.com/hexops/mach) (Zig, MIT, Apache)
