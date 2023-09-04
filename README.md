@@ -24,7 +24,7 @@ I'm the author of [Flecs](https://github.com/SanderMertens/flecs), an Entity Com
 - [Is ECS good for multithreading?](#is-ecs-good-for-multithreading)
 - [Can ECS be used outside of gaming?](#can-ecs-be-used-outside-of-gaming)
 - [How do I start with ECS?](#how-do-i-start-with-ecs)
-- [How do I design for ECS?](#how-do-i-write-for-ecs)
+- [How do I design for ECS?](#how-do-i-design-for-ecs)
 - [What are the different ways to implement an ECS?](#what-are-the-different-ways-to-implement-an-ecs)
 - [How are components modified?](#how-are-components-modified)
 - [How are entities matched with systems?](#how-are-entities-matched-with-systems)
