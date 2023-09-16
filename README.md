@@ -140,7 +140,7 @@ ECS ("Entity Component System") describes a design approach which promotes code 
 The ECS design pattern is often enabled by a framework. The term "Entity Component System" is often used to indicate a specific implementation of the design pattern.
 
 ### When is something an ECS?
-The most rigid interperation of an ECS is something that has entities, components and systems, according to the definitions in the previous question.
+The most rigid interpretaion of an ECS is something that has entities, components and systems, according to the definitions in the previous question.
 
 In practice ECS is used a bit more liberally. Some ECS frameworks do not have systems, and only provide methods for querying entities. Other frameworks may allow for adding things to entities than are not components. These implementations are still considered ECS by many people.
 
