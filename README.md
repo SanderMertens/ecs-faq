@@ -91,6 +91,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Morpeh](https://github.com/scellecs/morpeh) (C#, MIT)
 - [ME.ECS](https://github.com/chromealex/ecs) (C#, MIT)
 - [DefaultEcs](https://github.com/Doraku/DefaultEcs) (C#, MIT-0)
+- [EthereumECS](https://github.com/HelloRickey/EthereumECS) (Solidity, MIT)
 
 ### Inactive projects
 - [Artemis](https://github.com/junkdog/artemis-odb) (Java, custom license)
