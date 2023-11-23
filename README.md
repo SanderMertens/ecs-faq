@@ -100,6 +100,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [LeoECS](https://github.com/Leopotam/ecs) (C#, MIT)
 
 ## Resources
+- [Taking the Entity-Component-System Architecture Seriously](https://www.youtube.com/watch?v=VpiprNBEZsk) (@alice-i-cecile, Youtube)
 - [Overwatch Gameplay Architecture and Netcode](https://www.youtube.com/watch?v=W3aieHjyNvw) (Blizzard, GDC)
 - [Data-Oriented Design and C++](https://www.youtube.com/watch?v=rX0ItVEVjHc) (Mike Acton, CppCon)
 - [CPU caches and why you care](https://vimeo.com/97337258) (Scott Meyers, NDC)
