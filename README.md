@@ -106,6 +106,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [CPU caches and why you care](https://vimeo.com/97337258) (Scott Meyers, NDC)
 - [Building a fast ECS on top of a slow ECS](https://youtu.be/71RSWVyOMEY) (UnitOfTime, Youtube)
 - [Culling the Battlefield: Data Oriented Design in Practice](https://www.gdcvault.com/play/1014491/Culling-the-Battlefield-Data-Oriented) (DICE, GDC)
+- [Interactive app for browsing systems of Cities Skylines 2](https://captain-of-coit.github.io/cs2-ecs-explorer/#) (Captain-Of-Coit)
 - [Game Engine Entity/Object systems](https://www.youtube.com/watch?v=jjEsB611kxs) (Bobby Anguelov, presentation)
 - [Understanding Data Oriented Design for Entity Component Systems](https://www.youtube.com/watch?v=0_Byw9UMn9g) (Unity, GDC)
 - [Understanding Data Oriented Design](https://learn.unity.com/tutorial/part-1-understand-data-oriented-design?courseId=60132919edbc2a56f9d439c3&signup=true&uv=2020.1) (Unity, Tutorial)
