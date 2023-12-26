@@ -103,6 +103,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Taking the Entity-Component-System Architecture Seriously](https://www.youtube.com/watch?v=VpiprNBEZsk) (@alice-i-cecile, Youtube)
 - [Overwatch Gameplay Architecture and Netcode](https://www.youtube.com/watch?v=W3aieHjyNvw) (Blizzard, GDC)
 - [Data-Oriented Design and C++](https://www.youtube.com/watch?v=rX0ItVEVjHc) (Mike Acton, CppCon)
+- [Using Rust for Game Development](https://www.youtube.com/watch?v=aKLntZcp27M) (Catherine West, RustConf)
 - [CPU caches and why you care](https://vimeo.com/97337258) (Scott Meyers, NDC)
 - [Building a fast ECS on top of a slow ECS](https://youtu.be/71RSWVyOMEY) (UnitOfTime, Youtube)
 - [Culling the Battlefield: Data Oriented Design in Practice](https://www.gdcvault.com/play/1014491/Culling-the-Battlefield-Data-Oriented) (DICE, GDC)
