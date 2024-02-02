@@ -177,6 +177,7 @@ A number of commercial projects and engines today use or have used ECS. If you k
 - [ArcGIS](https://developers.arcgis.com/arcgis-runtime/) (Framework, uses EnTT)
 - [Aether Engine](https://hadean.com/spatial-simulation/) (Framework, uses EnTT)
 - [FastSuite](https://www.fastsuite.com/) (Simulation, uses EnTT)
+- [Hytale](https://hytale.com/) (Game, uses Svelto)
 - [RoboCraft](https://robocraftgame.com/) (Game, uses Svelto)
 - [GameCraft](https://store.steampowered.com/app/1078000/Gamecraft/) (Game, uses Svelto)
 - [CardLife](http://cardlifegame.com/) (Game, uses Svelto)
