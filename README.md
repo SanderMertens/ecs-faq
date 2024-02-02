@@ -180,6 +180,7 @@ A number of commercial projects and engines today use or have used ECS. If you k
 - [RoboCraft](https://robocraftgame.com/) (Game, uses Svelto)
 - [GameCraft](https://store.steampowered.com/app/1078000/Gamecraft/) (Game, uses Svelto)
 - [CardLife](http://cardlifegame.com/) (Game, uses Svelto)
+- [Hytale](https://hytale.com/) (Game, uses Flecs)
 - [Tempest Rising](https://store.steampowered.com/app/1486920/Tempest_Rising/) (Game, uses Flecs)
 - [Territory Control](https://store.steampowered.com/app/690290/Territory_Control_2/) (Game, uses Flecs)
 - [The Forge](https://github.com/ConfettiFX/The-Forge) (Rendering Engine, uses Flecs)
