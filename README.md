@@ -65,6 +65,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [AFRAME](https://aframe.io) (HTML5/JS, MIT)
 - [Arch](https://github.com/genaray/Arch) (C#, Apache)
 - [Arche](https://github.com/mlange-42/arche) (Go, MIT)
+- [Bang](https://github.com/isadorasophia/bang) (C#, MIT)
 - [Bevy ECS](https://github.com/bevyengine/bevy) (Rust, MIT)
 - [Dominion](https://github.com/dominion-dev/dominion-ecs-java) (Java, MIT)
 - [Ecsact](https://ecsact.dev) (MIT)
