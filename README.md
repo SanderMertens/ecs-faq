@@ -176,6 +176,7 @@ A number of commercial projects and engines today use or have used ECS. If you k
 - [Warhammer 40K: Space Marine 2](https://store.steampowered.com/app/2183900/Warhammer_40000_Space_Marine_2/) (Game, [custom ECS](https://schedule.gdconf.com/session/the-ecs-behind-warhammer-40000-space-marine-2/906778))
 - [Diablo II: Resurrected](https://diablo2.blizzard.com/) (Game, uses EnTT)
 - [Call of Duty: Vanguard](https://www.callofduty.com/vanguard) (Game, uses EnTT)
+- [Tiny Glade](https://store.steampowered.com/app/2198150/Tiny_Glade/) (Game, uses [Bevy ECS](https://bevyengine.org/))
 - [Xenonauts](https://store.steampowered.com/app/223830/Xenonauts/) (Game, uses custom ECS)
 - [Survival City](https://play.google.com/store/apps/details?id=com.playstack.survivalcity&hl=en&gl=US) (Game, uses Entitas)
 - [Penko Park](https://store.steampowered.com/app/852090/Penko_Park) (Game, uses Entitas)
