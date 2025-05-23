@@ -86,7 +86,6 @@ The current list includes both open and closed source ECS implementations, and e
 - [Apple RealityKit](https://developer.apple.com/documentation/realitykit) (Swift, Commercial license)
 - [Shipyard](https://github.com/leudz/shipyard) (Rust, Apache/MIT)
 - [Specs](https://github.com/amethyst/specs) (Rust, Apache/MIT)
-- [Svelto](https://github.com/sebas77/Svelto.ECS) (C#, MIT)
 - [Unity DOTS](https://unity.com/dots) (C#, Commercial license)
 - [Unreal Mass](https://docs.unrealengine.com/5.0/en-US/overview-of-mass-entity-in-unreal-engine/) (C++, Commercial license)
 - [Zig ECS](https://github.com/prime31/zig-ecs) (Zig, MIT)
@@ -102,6 +101,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Legion](https://github.com/amethyst/legion) (Rust, MIT)
 - [tiny-ecs](https://github.com/bakpakin/tiny-ecs) (Lua, MIT)
 - [LeoECS](https://github.com/Leopotam/ecs) (C#, MIT)
+- [Svelto](https://github.com/sebas77/Svelto.ECS) (C#, MIT)
 
 ## Resources
 - [Taking the Entity-Component-System Architecture Seriously](https://www.youtube.com/watch?v=VpiprNBEZsk) (@alice-i-cecile, Youtube)
