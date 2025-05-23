@@ -75,7 +75,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Esper](https://github.com/benmoran56/esper) (Python, MIT)
 - [fennecs](https://fennecs.tech) (C#, MIT)
 - [Fireblade](https://github.com/fireblade-engine/ecs) (Swift, MIT)
-- [Flecs](https://github.com/SanderMertens/flecs) (C/C++11, [C#](https://github.com/flecs-hub/flecs-cs), [Rust](https://github.com/jazzay/flecs-rs), [Zig](https://github.com/prime31/zig-flecs), [Lua](https://github.com/flecs-hub/flecs-lua), MIT)
+- [Flecs](https://github.com/SanderMertens/flecs) (C/C++11, MIT)
 - [Fleks](https://github.com/Quillraven/Fleks) (Kotlin Multiplatform, MIT)
 - [Friflo ECS](https://github.com/friflo/Friflo.Engine.ECS) (C#, MIT)
 - [Hecs](https://github.com/Ralith/hecs) (Rust, Apache/MIT)
@@ -102,6 +102,10 @@ The current list includes both open and closed source ECS implementations, and e
 - [Legion](https://github.com/amethyst/legion) (Rust, MIT)
 - [tiny-ecs](https://github.com/bakpakin/tiny-ecs) (Lua, MIT)
 - [LeoECS](https://github.com/Leopotam/ecs) (C#, MIT)
+- [Flecs-cs](https://github.com/SanderMertens/flecs) (C#, MIT)
+- [Flecs-rs](https://github.com/jazzay/flecs-rs) (Rust, MIT)
+- [Zig-flecs](https://github.com/prime31/zig-flecs) (C/C++/Zig)
+- [Flecs-lua](https://github.com/flecs-hub/flecs-lua) (C/Lua, MIT)
 
 ## Resources
 - [Taking the Entity-Component-System Architecture Seriously](https://www.youtube.com/watch?v=VpiprNBEZsk) (@alice-i-cecile, Youtube)
