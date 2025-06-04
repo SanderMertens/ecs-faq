@@ -67,6 +67,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Arche](https://github.com/mlange-42/arche) (Go, MIT)
 - [Bang](https://github.com/isadorasophia/bang) (C#, MIT)
 - [Bevy ECS](https://github.com/bevyengine/bevy) (Rust, MIT)
+- [cl-fast-ecs](https://gitlab.com/lockie/cl-fast-ecs) (Common Lisp, MIT)
 - [Dominion](https://github.com/dominion-dev/dominion-ecs-java) (Java, MIT)
 - [Ecsact](https://ecsact.dev) (MIT)
 - [EntityX](https://github.com/alecthomas/entityx) (C++11, MIT)
