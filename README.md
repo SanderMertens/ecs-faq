@@ -60,7 +60,7 @@ I'm the author of [Flecs](https://github.com/SanderMertens/flecs), an Entity Com
 - [Archetype](#archetype)
 
 ## ECS frameworks
-The current list includes both open and closed source ECS implementations, and engines that have adopted ECS pattern. Projects that had no activity in the past year are not included.
+The current list includes both open and closed source ECS implementations, and engines that have adopted ECS pattern. Projects that had no meaningful modifications to the source code in the past year are not included.
 
 - [AFRAME](https://aframe.io) (HTML5/JS, MIT)
 - [Arch](https://github.com/genaray/Arch) (C#, Apache)
@@ -83,7 +83,6 @@ The current list includes both open and closed source ECS implementations, and e
 - [Photon Quantum](https://doc.photonengine.com/en-us/quantum/current/getting-started/quantum-intro) (C#, Commercial license)
 - [Apple RealityKit](https://developer.apple.com/documentation/realitykit) (Swift, Commercial license)
 - [Shipyard](https://github.com/leudz/shipyard) (Rust, Apache/MIT)
-- [Svelto](https://github.com/sebas77/Svelto.ECS) (C#, MIT)
 - [Unity DOTS](https://unity.com/dots) (C#, Commercial license)
 - [Unreal Mass](https://docs.unrealengine.com/5.0/en-US/overview-of-mass-entity-in-unreal-engine/) (C++, Commercial license)
 - [Zig ECS](https://github.com/prime31/zig-ecs) (Zig, MIT)
@@ -100,6 +99,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [tiny-ecs](https://github.com/bakpakin/tiny-ecs) (Lua, MIT)
 - [LeoECS](https://github.com/Leopotam/ecs) (C#, MIT)
 - [Specs](https://github.com/amethyst/specs) (Rust, Apache/MIT)
+- [Svelto](https://github.com/sebas77/Svelto.ECS) (C#, MIT)
 - [ME.ECS](https://github.com/chromealex/ecs) (C#, MIT)
 
 ## Resources
