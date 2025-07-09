@@ -76,7 +76,6 @@ The current list includes both open and closed source ECS implementations, and e
 - [Fleks](https://github.com/Quillraven/Fleks) (Kotlin Multiplatform, MIT)
 - [Friflo ECS](https://github.com/friflo/Friflo.Engine.ECS) (C#, MIT)
 - [Hecs](https://github.com/Ralith/hecs) (Rust, Apache/MIT)
-- [Nu](https://github.com/bryanedds/Nu) (F#, MIT)
 - [Photon Quantum](https://doc.photonengine.com/en-us/quantum/current/getting-started/quantum-intro) (C#, Commercial license)
 - [Apple RealityKit](https://developer.apple.com/documentation/realitykit) (Swift, Commercial license)
 - [Shipyard](https://github.com/leudz/shipyard) (Rust, Apache/MIT)
