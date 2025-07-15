@@ -75,6 +75,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Flecs](https://github.com/SanderMertens/flecs) (C/C++11, [C#](https://github.com/flecs-hub/flecs-cs), [Rust](https://github.com/jazzay/flecs-rs), [Zig](https://github.com/prime31/zig-flecs), [Lua](https://github.com/flecs-hub/flecs-lua), MIT)
 - [Fleks](https://github.com/Quillraven/Fleks) (Kotlin Multiplatform, MIT)
 - [Friflo ECS](https://github.com/friflo/Friflo.Engine.ECS) (C#, MIT)
+- [Gaia ECS](https://github.com/richardbiely/gaia-ecs) (C++, MIT)
 - [Hecs](https://github.com/Ralith/hecs) (Rust, Apache/MIT)
 - [Photon Quantum](https://doc.photonengine.com/en-us/quantum/current/getting-started/quantum-intro) (C#, Commercial license)
 - [Apple RealityKit](https://developer.apple.com/documentation/realitykit) (Swift, Commercial license)
