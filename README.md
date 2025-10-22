@@ -129,6 +129,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Making the most of Entity Identifiers](https://ajmmertens.medium.com/doing-a-lot-with-a-little-ecs-identifiers-25a72bd2647) (Sander Mertens, blog)
 - [Why Storing State Machines in ECS is a Bad Idea](https://ajmmertens.medium.com/why-storing-state-machines-in-ecs-is-a-bad-idea-742de7a18e59) (Sander Mertens, blog)
 - [ECS back & forth](https://skypjack.github.io/2019-02-14-ecs-baf-part-1/) (Michele Caini, blog series)
+- [Your ECS probably still sucks)[https://gist.github.com/Dreaming381/89d65f81b9b430ffead443a2d430defc] (Dreaming381, gist)
 - [Sparse Set](https://www.geeksforgeeks.org/sparse-set/) (Geeks for Geeks)
 - [Hibitset](https://docs.rs/hibitset/0.6.3/hibitset/) (DOCS.RS)
 
