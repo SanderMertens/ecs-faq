@@ -104,6 +104,7 @@ The current list includes both open and closed source ECS implementations, and e
 
 ## Resources
 - [Taking the Entity-Component-System Architecture Seriously](https://www.youtube.com/watch?v=VpiprNBEZsk) (@alice-i-cecile, Youtube)
+- [Exploring the Theory and Practice of Concurrency in the Entity-Component-System Pattern](https://www.youtube.com/watch?v=z2vqiVtmsuY) (Patrick Redmond, Jonathan Castello, José Manuel Calderón Trilla, and Lindsey Kuper, Youtube)
 - [Overwatch Gameplay Architecture and Netcode](https://www.youtube.com/watch?v=W3aieHjyNvw) (Blizzard, GDC)
 - [Data-Oriented Design and C++](https://www.youtube.com/watch?v=rX0ItVEVjHc) (Mike Acton, CppCon)
 - [Using Rust for Game Development](https://www.youtube.com/watch?v=aKLntZcp27M) (Catherine West, RustConf)
