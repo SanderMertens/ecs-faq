@@ -107,6 +107,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Exploring the Theory and Practice of Concurrency in the Entity-Component-System Pattern](https://www.youtube.com/watch?v=z2vqiVtmsuY) (Patrick Redmond, Jonathan Castello, José Manuel Calderón Trilla, and Lindsey Kuper, Youtube)
 - [Overwatch Gameplay Architecture and Netcode](https://www.youtube.com/watch?v=W3aieHjyNvw) (Blizzard, GDC)
 - [Data-Oriented Design and C++](https://www.youtube.com/watch?v=rX0ItVEVjHc) (Mike Acton, CppCon)
+- [Practical Optimizations](https://www.youtube.com/watch?v=NAVbI1HIzCE) (Jason Booth, Youtube)
 - [Using Rust for Game Development](https://www.youtube.com/watch?v=aKLntZcp27M) (Catherine West, RustConf)
 - [CPU caches and why you care](https://vimeo.com/97337258) (Scott Meyers, NDC)
 - [Building a fast ECS on top of a slow ECS](https://youtu.be/71RSWVyOMEY) (UnitOfTime, Youtube)
