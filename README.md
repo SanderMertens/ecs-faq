@@ -70,6 +70,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Ecsact](https://ecsact.dev) (MIT)
 - [EnTT](https://github.com/skypjack/entt) (C++17, MIT)
 - [Esper](https://github.com/benmoran56/esper) (Python, MIT)
+- [StaticEcs](https://github.com/Felid-Force-Studios/StaticEcs) (C#, MIT)
 - [fennecs](https://fennecs.tech) (C#, MIT)
 - [Fireblade](https://github.com/fireblade-engine/ecs) (Swift, MIT)
 - [Flecs](https://github.com/SanderMertens/flecs) (C/C++11, [C#](https://github.com/flecs-hub/flecs-cs), [Rust](https://github.com/jazzay/flecs-rs), [Zig](https://github.com/prime31/zig-flecs), [Lua](https://github.com/flecs-hub/flecs-lua), MIT)
