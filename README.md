@@ -87,6 +87,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [luaecs](https://github.com/cloudwu/luaecs) (C/Lua, MIT)
 - [Morpeh](https://github.com/scellecs/morpeh) (C#, MIT)
 - [Jecs](https://github.com/Ukendio/jecs) (Luau, MIT)
+- [DragonECS](https://github.com/DCFApixels/DragonECS) (C#, MIT)
 
 ### Inactive projects
 - [Artemis](https://github.com/junkdog/artemis-odb) (Java, custom license)
