@@ -67,6 +67,7 @@ The current list includes both open and closed source ECS implementations, and e
 - [Ark](https://github.com/mlange-42/ark) (Go, Apache/MIT)
 - [Bang](https://github.com/isadorasophia/bang) (C#, MIT)
 - [Bevy ECS](https://github.com/bevyengine/bevy) (Rust, MIT)
+- [EasyEcs](https://github.com/JasonXuDeveloper/EasyEcs) (C#, MIT)
 - [Ecsact](https://ecsact.dev) (MIT)
 - [EnTT](https://github.com/skypjack/entt) (C++20, MIT)
 - [Esper](https://github.com/benmoran56/esper) (Python, MIT)
